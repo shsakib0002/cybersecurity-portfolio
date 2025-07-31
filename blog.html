@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog | MD. SAKIB HASAN</title>
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+  <link rel="shortcut icon" href="favicon.svg">
+  <link rel="manifest" href="site.webmanifest">
+  
+  <link rel="stylesheet" href="style.css?v=1.16">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="container">
+      <a href="index.html" class="logo">Sakib Hasan</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="certifications.html">Certifications</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Blog Section -->
+  <main class="container">
+    <h1><i class="fa-solid fa-blog"></i> Cybersecurity Blog & Insights</h1>
+    
+    <!-- Blog Introduction -->
+    <section class="blog-intro">
+      <h2><i class="fa-solid fa-lightbulb"></i> About My Blog</h2>
+      <p>Welcome to my cybersecurity blog where I share insights, write-ups, and practical knowledge gained from my journey in offensive security. Here you'll find detailed analysis of vulnerabilities, tool reviews, and real-world security scenarios.</p>
+    </section>
+
+    <!-- Published Articles -->
+    <section class="published-articles">
+      <h2><i class="fa-solid fa-newspaper"></i> Published Articles</h2>
+      
+      <!-- Featured Article -->
+      <article class="featured-article">
+        <div class="article-meta">
+          <span class="article-date"><i class="fa-solid fa-calendar"></i> July 23, 2025</span>
+          <span class="article-author"><i class="fa-solid fa-user"></i> Dr. Johannes Ullrich (SANS Institute)</span>
+          <span class="article-category-badge">Critical Vulnerability</span>
+        </div>
+        
+        <h3 class="article-title">
+          <i class="fa-solid fa-exclamation-triangle"></i>
+          Critical SharePoint Zero-Day Exploited: What You Need to Know About CVE-2025-53770
+        </h3>
+        
+        <div class="article-content">
+          <p class="article-intro">
+            <strong>CVE-2025-53770 is likely one of the most critical SharePoint vulnerabilities to date.</strong>
+          </p>
+          
+          <p>
+            On Sunday, July 20, Microsoft alerted customers to an actively exploited critical zero-day vulnerability, CVE-2025-53770, affecting SharePoint servers. SharePoint Server 2016, 2019, and the Subscription editions are all susceptible, while SharePoint Online is not affected. Any organizations running on-prem SharePoint are advised to act immediately.
+          </p>
+          
+          <p>
+            Authentication is entirely bypassed by spoofing the Referer header, allowing attackers to upload files, including a web shell. In some cases, researchers are seeing .Net machine keys being stolen so attackers can maintain access even after patching.
+          </p>
+          
+          <div class="article-highlight">
+            <h4><i class="fa-solid fa-lightbulb"></i> Key Points:</h4>
+            <ul>
+              <li><strong>No login required:</strong> Anyone with access to the server can get in, even without a username or password.</li>
+              <li><strong>Full control:</strong> Attackers can do anything the SharePoint server can do, including reading documents, uploading malware, or attacking other parts of your network.</li>
+              <li><strong>Silent persistence:</strong> Even if you apply patches, attackers may still have access if they stole the server's keys.</li>
+            </ul>
+          </div>
+          
+          <h4><i class="fa-solid fa-cogs"></i> How the Exploit Works</h4>
+          <p>
+            The vulnerability originated from bypassing mitigations for two previously patched bugs, CVE-2025-49704 and CVE-2025-49706. At the center of the exploit is the ToolPane.aspx endpoint. Attackers found it can be tricked into processing unauthorized requests by sending a spoofed Referer header claiming they're coming from SharePoint's logout page, SignOut.aspx.
+          </p>
+          
+          <h4><i class="fa-solid fa-shield-alt"></i> Detection and Mitigation</h4>
+          <p>
+            Review your SharePoint logs and endpoint or SIEM alerts. Key indicators to look for include:
+          </p>
+          <ul>
+            <li>Suspicious requests to /ToolPane.aspx</li>
+            <li>Presence of a web shell (check for spinstall0.aspx)</li>
+            <li>Unusual server activity from w3wp.exe</li>
+            <li>Known attacker IPs: 107.191.58.76, 104.238.159.149, 96.9.125.147</li>
+          </ul>
+          
+          <div class="article-action">
+            <h4><i class="fa-solid fa-tools"></i> Immediate Actions Required:</h4>
+            <ol>
+              <li>Apply Microsoft's latest security updates</li>
+              <li>Enable AMSI and update antivirus</li>
+              <li>Rotate your machine keys</li>
+              <li>Isolate vulnerable servers if needed</li>
+              <li>Reset credentials and review access</li>
+              <li>Run threat hunts and EDR scans</li>
+              <li>Check backups and logging</li>
+            </ol>
+          </div>
+          
+          <div class="article-source">
+            <p><i class="fa-solid fa-link"></i> <strong>Source:</strong> This analysis is based on research by <strong>Dr. Johannes Ullrich</strong>, Dean of Research for SANS Technology Institute and founder of the Internet Storm Center (DShield.org).</p>
+          </div>
+        </div>
+      </article>
+    </section>
+
+    <!-- Upcoming Articles -->
+    <section class="upcoming-articles">
+      <h2><i class="fa-solid fa-calendar-alt"></i> Upcoming Articles</h2>
+      <div class="article-grid">
+        <div class="article-card">
+          <div class="article-header">
+            <i class="fa-solid fa-bug"></i>
+            <h3>SQL Injection Deep Dive</h3>
+            <span class="article-category">Web Security</span>
+          </div>
+          <p class="article-description">Comprehensive guide to SQL injection techniques, detection methods, and prevention strategies with practical examples.</p>
+          <div class="article-tags">
+            <span class="tag">SQLMap</span>
+            <span class="tag">Burp Suite</span>
+            <span class="tag">OWASP</span>
+          </div>
+        </div>
+
+        <div class="article-card">
+          <div class="article-header">
+            <i class="fa-solid fa-shield-virus"></i>
+            <h3>XSS Attack Vectors</h3>
+            <span class="article-category">Web Security</span>
+          </div>
+          <p class="article-description">Exploring different types of Cross-Site Scripting attacks, payloads, and real-world exploitation scenarios.</p>
+          <div class="article-tags">
+            <span class="tag">XSS</span>
+            <span class="tag">JavaScript</span>
+            <span class="tag">Payloads</span>
+          </div>
+        </div>
+
+        <div class="article-card">
+          <div class="article-header">
+            <i class="fa-solid fa-network-wired"></i>
+            <h3>Network Reconnaissance</h3>
+            <span class="article-category">Network Security</span>
+          </div>
+          <p class="article-description">Step-by-step network reconnaissance techniques using Nmap, Wireshark, and other essential tools.</p>
+          <div class="article-tags">
+            <span class="tag">Nmap</span>
+            <span class="tag">Wireshark</span>
+            <span class="tag">Recon</span>
+          </div>
+        </div>
+
+        <div class="article-card">
+          <div class="article-header">
+            <i class="fa-solid fa-trophy"></i>
+            <h3>CTF Write-ups</h3>
+            <span class="article-category">Capture The Flag</span>
+          </div>
+          <p class="article-description">Detailed walkthroughs of CTF challenges, including web exploitation, forensics, and reverse engineering.</p>
+          <div class="article-tags">
+            <span class="tag">CTF</span>
+            <span class="tag">TryHackMe</span>
+            <span class="tag">HackTheBox</span>
+          </div>
+        </div>
+
+        <div class="article-card">
+          <div class="article-header">
+            <i class="fa-solid fa-tools"></i>
+            <h3>Tool Reviews & Setup</h3>
+            <span class="article-category">Tools & Setup</span>
+          </div>
+          <p class="article-description">In-depth reviews of cybersecurity tools, installation guides, and optimal configuration for penetration testing.</p>
+          <div class="article-tags">
+            <span class="tag">Kali Linux</span>
+            <span class="tag">Tools</span>
+            <span class="tag">Setup</span>
+          </div>
+        </div>
+
+        <div class="article-card">
+          <div class="article-header">
+            <i class="fa-solid fa-user-secret"></i>
+            <h3>Red Team Methodology</h3>
+            <span class="article-category">Red Teaming</span>
+          </div>
+          <p class="article-description">Understanding red team operations, attack frameworks, and advanced adversary simulation techniques.</p>
+          <div class="article-tags">
+            <span class="tag">Red Team</span>
+            <span class="tag">MITRE ATT&CK</span>
+            <span class="tag">Adversary</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Blog Categories -->
+    <section class="blog-categories">
+      <h2><i class="fa-solid fa-tags"></i> Blog Categories</h2>
+      <div class="category-grid">
+        <div class="category-card">
+          <i class="fa-solid fa-bug"></i>
+          <h3>Web Security</h3>
+          <p>OWASP Top 10, web vulnerabilities, and exploitation techniques</p>
+        </div>
+        <div class="category-card">
+          <i class="fa-solid fa-network-wired"></i>
+          <h3>Network Security</h3>
+          <p>Network reconnaissance, packet analysis, and network exploitation</p>
+        </div>
+        <div class="category-card">
+          <i class="fa-solid fa-trophy"></i>
+          <h3>CTF Challenges</h3>
+          <p>Capture The Flag write-ups and challenge solutions</p>
+        </div>
+        <div class="category-card">
+          <i class="fa-solid fa-tools"></i>
+          <h3>Tools & Setup</h3>
+          <p>Cybersecurity tool reviews and configuration guides</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter Signup -->
+    <section class="newsletter">
+      <h2><i class="fa-solid fa-envelope-open-text"></i> Stay Updated</h2>
+      <p>Get notified when new articles are published. Join the cybersecurity community!</p>
+      <div class="newsletter-form">
+        <input type="email" placeholder="Enter your email address" class="newsletter-input">
+        <button class="btn newsletter-btn">Subscribe</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>
+        <a href="mailto:sakibhasan.infosec@gmail.com"><i class="fa-solid fa-envelope"></i> Email</a>
+        |
+        <a href="https://www.linkedin.com/in/md-sakib-hasan-infosec" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
+        |
+        <a href="https://github.com/" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
+      </p>
+    </div>
+  </footer>
+</body>
+</html> 
