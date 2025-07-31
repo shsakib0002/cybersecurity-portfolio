@@ -40,10 +40,10 @@
 }
 
   body {
-    font-family: 'Montserrat', Arial, sans-serif;
-    background: url('assets/background1.jpg');
-    background-size: cover;
-    background-position: center;
+  font-family: 'Montserrat', Arial, sans-serif;
+  background: url('assets/background2.png');
+  background-size: cover;
+  background-position: center;
   color: #e6eaf3;
   line-height: 1.7;
   min-height: 100vh;
