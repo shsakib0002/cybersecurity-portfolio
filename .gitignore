@@ -1,0 +1,16 @@
+# Browser data and system files
+AppData/
+*.log
+*.tmp
+*.cache
+
+# OS files
+Thumbs.db
+.DS_Store
+
+# Editor files
+.vscode/
+.idea/
+
+# Node modules (if any)
+node_modules/
