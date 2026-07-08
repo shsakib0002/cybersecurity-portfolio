@@ -1,61 +1,529 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Md. Sakib Hasan | Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MD. Sakib Hasan — Cybersecurity & Network Engineer</title>
+  <meta name="description" content="Portfolio of MD. Sakib Hasan — Infrastructure & Network Operations Engineer specializing in cybersecurity, RF engineering, and offensive security.">
+  <meta name="keywords" content="cybersecurity, network engineer, RF engineering, penetration testing, red team, WISP, MikroTik">
+  <meta property="og:title" content="MD. Sakib Hasan — Cybersecurity Portfolio">
+  <meta property="og:description" content="Infrastructure & Network Operations Engineer specializing in cybersecurity and RF engineering.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sakibinfosec.netlify.app">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "MD. Sakib Hasan",
+    "jobTitle": "Infrastructure & Network Operations Engineer",
+    "url": "https://sakibinfosec.netlify.app",
+    "sameAs": [
+      "https://github.com/shsakib0002",
+      "https://linkedin.com/in/"
+    ]
+  }
+  </script>
 </head>
 <body>
-    <nav class="navbar">
-        <h1 class="logo"><a href="index.html" style="color: #e60000; text-decoration: none;">Sakib Hasan</a></h1>
-        <ul class="nav-links">
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="container">
+      <a href="index.html" class="nav-logo">
+        <div class="logo-icon">S</div>
+        Sakib<span>.</span>Sec
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html" class="active">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="certifications.html">Certifications</a>
+        <a href="blog.html">Blog</a>
+        <a href="resume.html">Resume</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+  <div class="mobile-overlay" id="mobileOverlay"></div>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="pulse-dot"></span>
+          Available for opportunities
+        </div>
+        <h1>Hi, I'm <span class="highlight">Sakib Hasan</span></h1>
+        <p class="subtitle">&gt; Infrastructure & Network Operations Engineer</p>
+        <p class="description">
+          Specializing in cybersecurity, RF engineering, and offensive security. 
+          Building and securing network infrastructure at scale — from WISP deployments 
+          to red team operations.
+        </p>
+        <div class="hero-buttons">
+          <a href="contact.html" class="btn btn-primary">
+            <i data-lucide="send" style="width:16px;height:16px"></i>
+            Get In Touch
+          </a>
+          <a href="resume.html" class="btn btn-secondary">
+            <i data-lucide="file-text" style="width:16px;height:16px"></i>
+            View Resume
+          </a>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-image-wrapper">
+          <div class="hero-image-bg"></div>
+          <div class="hero-image">
+            <img src="assets/profile.jpg" alt="MD. Sakib Hasan" onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg, #1a1a2e, #16213e)';this.parentElement.innerHTML+='<div style=\'display:flex;align-items:center;justify-content:center;height:100%;font-size:80px;color:#dc2626;opacity:0.3\'>SH</div>'">
+            <div class="hero-image-overlay"></div>
+          </div>
+          <div class="floating-badge badge-top">
+            <div class="badge-icon red"><i data-lucide="shield-check" style="width:18px;height:18px"></i></div>
+            <div>
+              <div style="font-size:12px;color:var(--text-muted)">Specialization</div>
+              <div>Offensive Security</div>
+            </div>
+          </div>
+          <div class="floating-badge badge-bottom">
+            <div class="badge-icon green"><i data-lucide="radio-tower" style="width:18px;height:18px"></i></div>
+            <div>
+              <div style="font-size:12px;color:var(--text-muted)">Experience</div>
+              <div>RF / WISP Engineering</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-text">
+          <div class="section-label">About Me</div>
+          <h2 class="section-title" style="text-align:left">Passionate About Securing <br>Network Infrastructure</h2>
+          <p>
+            I'm MD. Sakib Hasan, an Infrastructure & Network Operations Engineer with deep expertise 
+            in RF engineering, WISP infrastructure management, and cybersecurity. Currently working 
+            at Amber IT — one of Bangladesh's leading ISPs and IIGs — I manage complex wireless 
+            networks spanning fiber, licensed microwave, and cutting-edge WISP infrastructure.
+          </p>
+          <p>
+            My journey bridges the gap between network operations and offensive security. Understanding 
+            network architectures from the ground up gives me a unique advantage in identifying 
+            vulnerabilities and designing robust security solutions.
+          </p>
+          <div class="about-highlights">
+            <div class="about-highlight-item">
+              <span class="check">✓</span>
+              RF & WISP Infrastructure
+            </div>
+            <div class="about-highlight-item">
+              <span class="check">✓</span>
+              Offensive Security
+            </div>
+            <div class="about-highlight-item">
+              <span class="check">✓</span>
+              Network Architecture
+            </div>
+            <div class="about-highlight-item">
+              <span class="check">✓</span>
+              Vulnerability Research
+            </div>
+            <div class="about-highlight-item">
+              <span class="check">✓</span>
+              Red Team Operations
+            </div>
+            <div class="about-highlight-item">
+              <span class="check">✓</span>
+              Incident Response
+            </div>
+          </div>
+        </div>
+        <div class="about-image">
+          <img src="assets/background1.jpg" alt="Network Infrastructure" onerror="this.parentElement.style.background='linear-gradient(135deg, rgba(220,38,38,0.1), var(--bg-card))';this.style.display='none'">
+          <div class="about-image-overlay">
+            <div style="display:flex;gap:16px">
+              <div class="floating-badge" style="position:static;animation:none">
+                <div class="badge-icon blue"><i data-lucide="wifi" style="width:16px;height:16px"></i></div>
+                <div>
+                  <div style="font-size:11px;color:var(--text-muted)">Devices Managed</div>
+                  <div style="font-size:16px;font-weight:700">500+</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Experience Section -->
+  <section id="experience" style="background:var(--bg-secondary)">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">Experience</div>
+        <h2 class="section-title">Professional Journey</h2>
+        <p class="section-desc">Building expertise across network engineering and cybersecurity domains.</p>
+      </div>
+      <div class="experience-timeline">
+        <div class="experience-item">
+          <div class="timeline-dot"></div>
+          <div class="experience-date">2024 — Present</div>
+          <div class="experience-role">Assistant Network Engineer — RF Team</div>
+          <div class="experience-company">Amber IT Ltd. (Leading ISP & IIG, Bangladesh)</div>
+          <div class="experience-desc">
+            Managing complex WISP infrastructure including Cambium ePMP, Ubiquiti airMAX/LTU, 
+            and Mimosa networks. Responsible for core routing, link optimization, and network 
+            reliability across the entire access layer.
+          </div>
+          <div class="experience-tags">
+            <span class="tag">WISP</span>
+            <span class="tag">MikroTik</span>
+            <span class="tag">Cambium</span>
+            <span class="tag">Ubiquiti</span>
+            <span class="tag">RF Planning</span>
+            <span class="tag">NOC</span>
+          </div>
+        </div>
+        <div class="experience-item">
+          <div class="timeline-dot"></div>
+          <div class="experience-date">2023 — 2024</div>
+          <div class="experience-role">Network Operations Intern</div>
+          <div class="experience-company">Amber IT Ltd.</div>
+          <div class="experience-desc">
+            Gained foundational experience in ISP network operations, including device configuration, 
+            monitoring, and troubleshooting across multiple network tiers.
+          </div>
+          <div class="experience-tags">
+            <span class="tag neutral">Network Monitoring</span>
+            <span class="tag neutral">Troubleshooting</span>
+            <span class="tag neutral">L2/L3 Configuration</span>
+          </div>
+        </div>
+        <div class="experience-item">
+          <div class="timeline-dot"></div>
+          <div class="experience-date">Ongoing</div>
+          <div class="experience-role">Cybersecurity Researcher & CTF Player</div>
+          <div class="experience-company">Self-Directed Learning</div>
+          <div class="experience-desc">
+            Actively pursuing offensive security through CTF competitions on TryHackMe and HackTheBox, 
+            vulnerability research, and red team methodology study.
+          </div>
+          <div class="experience-tags">
+            <span class="tag">TryHackMe</span>
+            <span class="tag">HackTheBox</span>
+            <span class="tag">Red Team</span>
+            <span class="tag">MITRE ATT&CK</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">Skills</div>
+        <h2 class="section-title">Technical Arsenal</h2>
+        <p class="section-desc">Tools and technologies I work with across network engineering and cybersecurity.</p>
+      </div>
+      <div class="skills-grid">
+        <div class="card skill-card">
+          <div class="skill-icon"><i data-lucide="radio-tower" style="width:24px;height:24px"></i></div>
+          <h3>RF Engineering</h3>
+          <p>Link budgeting, spectrum analysis, LOS surveys, PTP/PTMP optimization</p>
+        </div>
+        <div class="card skill-card">
+          <div class="skill-icon" style="background:rgba(59,130,246,0.1);color:var(--blue);border-color:rgba(59,130,246,0.15)"><i data-lucide="network" style="width:24px;height:24px"></i></div>
+          <h3>Network Infrastructure</h3>
+          <p>VLANs, routing, switching, OSPF/BGP, subscriber management</p>
+        </div>
+        <div class="card skill-card">
+          <div class="skill-icon" style="background:rgba(34,197,94,0.1);color:var(--green);border-color:rgba(34,197,94,0.15)"><i data-lucide="shield" style="width:24px;height:24px"></i></div>
+          <h3>Offensive Security</h3>
+          <p>Penetration testing, vulnerability assessment, red team methodology</p>
+        </div>
+        <div class="card skill-card">
+          <div class="skill-icon" style="background:rgba(168,85,247,0.1);color:var(--purple);border-color:rgba(168,85,247,0.15)"><i data-lucide="settings" style="width:24px;height:24px"></i></div>
+          <h3>MikroTik RouterOS</h3>
+          <p>Advanced configuration, Winbox management, firewall rules, QoS</p>
+        </div>
+        <div class="card skill-card">
+          <div class="skill-icon" style="background:rgba(234,179,8,0.1);color:var(--yellow);border-color:rgba(234,179,8,0.15)"><i data-lucide="scan-search" style="width:24px;height:24px"></i></div>
+          <h3>Reconnaissance</h3>
+          <p>Nmap, Wireshark, network mapping, passive/active recon</p>
+        </div>
+        <div class="card skill-card">
+          <div class="skill-icon" style="background:rgba(220,38,38,0.1);color:var(--accent);border-color:rgba(220,38,38,0.15)"><i data-lucide="terminal" style="width:24px;height:24px"></i></div>
+          <h3>Linux & CLI</h3>
+          <p>Kali Linux, bash scripting, system administration, automation</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats Section -->
+  <section style="background:var(--bg-secondary)">
+    <div class="container">
+      <div class="stats-grid">
+        <div class="card stat-card">
+          <div class="stat-number" data-target="2">0</div>
+          <div class="stat-label">Years Experience</div>
+        </div>
+        <div class="card stat-card">
+          <div class="stat-number" data-target="500">0</div>
+          <div class="stat-label">Devices Managed</div>
+        </div>
+        <div class="card stat-card">
+          <div class="stat-number" data-target="50">0</div>
+          <div class="stat-label">CTF Challenges</div>
+        </div>
+        <div class="card stat-card">
+          <div class="stat-number" data-target="10">0</div>
+          <div class="stat-label">Certifications</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Latest Blog Preview -->
+  <section id="blog-preview">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">Latest Write-ups</div>
+        <h2 class="section-title">From The Blog</h2>
+        <p class="section-desc">Recent insights on cybersecurity, network engineering, and vulnerability research.</p>
+      </div>
+      <div class="projects-grid" style="grid-template-columns: repeat(2, 1fr);">
+        <div class="card" style="padding:0;overflow:hidden">
+          <div style="height:8px;background:linear-gradient(90deg, var(--accent), var(--accent-dark))"></div>
+          <div style="padding:32px">
+            <div class="blog-meta">
+              <span class="author">MD. Sakib Hasan</span>
+              <span class="dot"></span>
+              <span>Jan 13, 2025</span>
+            </div>
+            <h3 style="font-size:20px;font-weight:600;margin-bottom:10px;line-height:1.3">
+              <a href="blog.html">Mastering the Airwaves: A Deep Dive into WISP RF Technology</a>
+            </h3>
+            <p style="font-size:14px;color:var(--text-secondary);line-height:1.7;margin-bottom:16px">
+              Working as an Assistant Network Engineer on the RF Team at Amber IT, I've gained extensive 
+              experience in managing complex WISP infrastructure using Cambium, Ubiquiti, and Mimosa.
+            </p>
+            <div class="experience-tags">
+              <span class="tag">WISP</span>
+              <span class="tag">RF Engineering</span>
+              <span class="tag">MikroTik</span>
+            </div>
+          </div>
+        </div>
+        <div class="card" style="padding:0;overflow:hidden">
+          <div style="height:8px;background:linear-gradient(90deg, #dc2626, #991b1b)"></div>
+          <div style="padding:32px">
+            <div class="blog-meta">
+              <span class="author">Dr. Johannes Ullrich (SANS)</span>
+              <span class="dot"></span>
+              <span>Jul 23, 2025</span>
+            </div>
+            <h3 style="font-size:20px;font-weight:600;margin-bottom:10px;line-height:1.3">
+              <a href="blog.html">Critical SharePoint Zero-Day Exploited: CVE-2025-53770</a>
+            </h3>
+            <p style="font-size:14px;color:var(--text-secondary);line-height:1.7;margin-bottom:16px">
+              CVE-2025-53770 is likely one of the most critical SharePoint vulnerabilities to date. 
+              Authentication bypass via Referer header spoofing allows full server compromise.
+            </p>
+            <div class="experience-tags">
+              <span class="tag" style="background:rgba(239,68,68,0.12);color:#ef4444;border-color:rgba(239,68,68,0.2)">Critical</span>
+              <span class="tag">SharePoint</span>
+              <span class="tag">Zero-Day</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="text-center mt-32">
+        <a href="blog.html" class="btn btn-secondary">
+          View All Articles
+          <i data-lucide="arrow-right" style="width:16px;height:16px"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo">
+            <div class="logo-icon">S</div>
+            Sakib<span>.</span>Sec
+          </a>
+          <p>Cybersecurity professional & network engineer. Securing infrastructure from the ground up.</p>
+          <div class="contact-socials" style="margin-top:20px">
+            <a href="https://github.com/shsakib0002" target="_blank" rel="noopener" class="social-link" aria-label="GitHub">
+              <i data-lucide="github" style="width:18px;height:18px"></i>
+            </a>
+            <a href="#" class="social-link" aria-label="LinkedIn">
+              <i data-lucide="linkedin" style="width:18px;height:18px"></i>
+            </a>
+            <a href="mailto:sakib@example.com" class="social-link" aria-label="Email">
+              <i data-lucide="mail" style="width:18px;height:18px"></i>
+            </a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul>
             <li><a href="index.html">Home</a></li>
             <li><a href="projects.html">Projects</a></li>
             <li><a href="certifications.html">Certifications</a></li>
             <li><a href="blog.html">Blog</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>More</h4>
+          <ul>
+            <li><a href="resume.html">Resume</a></li>
             <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
-
-    <div class="container">
-        <div class="profile-header">
-            <img src="assets/headshot.jpg" alt="Profile Picture" class="profile-img">
-            <h1><i class="fa-solid fa-shield-halved"></i> MD. SAKIB HASAN</h1>
-            <h3>Infrastructure & Network Operations Engineer</h3>
+            <li><a href="https://github.com/shsakib0002" target="_blank" rel="noopener">GitHub</a></li>
+          </ul>
         </div>
-
-        <div class="card">
-            <h3><i class="fa-solid fa-user"></i> About Me</h3>
-            <p>I'm an Infrastructure & Network Operations Engineer at <strong>Huawei Technologies Bangladesh</strong>, where I monitor and support Huawei 5G Core platforms to keep telecom services available and stable around the clock.</p>
-            <p>My background spans Linux administration (RHCSA), enterprise networking, and virtualization, with a growing foundation in AWS and Huawei FusionCloud. I am currently pursuing an MSc in IT System Security while working toward a long-term career in cloud engineering.</p>
+        <div class="footer-col">
+          <h4>Expertise</h4>
+          <ul>
+            <li><a href="blog.html">RF Engineering</a></li>
+            <li><a href="blog.html">Offensive Security</a></li>
+            <li><a href="blog.html">Network Security</a></li>
+            <li><a href="blog.html">Red Teaming</a></li>
+          </ul>
         </div>
-
-        <div class="card">
-            <h3><i class="fa-solid fa-briefcase"></i> Professional Experience</h3>
-            <p><strong>Huawei Technologies Bangladesh</strong> | Network Operations Center Engineer (L1) <br><em>(Feb 2026 — Present)</em><br>
-            Monitoring and supporting Huawei 5G Core platforms (UDM, AAA, ENUM, iMaster MAE), tracking system alarms, and coordinating incident resolution in a live 24x7 telecom environment.</p>
-            <hr style="border-color: #333; margin: 15px 0;">
-            <p><strong>Amber IT Ltd</strong> | Assistant Network Engineer — RF <br><em>(Oct 2025 — Feb 2026)</em><br>
-            Assisted in RF planning, microwave radio installation, spectrum analysis, and troubleshooting interference issues for enterprise PTP/PTMP connections.</p>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2025 MD. Sakib Hasan. All rights reserved.</span>
+        <div class="footer-bottom-links">
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
         </div>
-
-        <div class="card">
-            <h3><i class="fa-solid fa-server"></i> Core Competencies</h3>
-            <ul>
-                <li><strong>Cloud & Virtualization:</strong> AWS, Huawei FusionCloud, VMware ESXi, Docker</li>
-                <li><strong>Linux & Infrastructure:</strong> RHCSA, Ubuntu, Bash Scripting, System Hardening</li>
-                <li><strong>Telecom Networks:</strong> Huawei 5G Core, iMaster MAE, RF Microwave Links</li>
-                <li><strong>Networking:</strong> TCP/IP, VLANs, Routing, CyberArk PAM</li>
-            </ul>
-        </div>
+      </div>
     </div>
+  </footer>
 
-    <footer class="footer">
-        <a href="mailto:sakibhasan.infosec@gmail.com"><i class="fa-solid fa-envelope"></i> Email</a> | 
-        <a href="https://www.linkedin.com/in/md-sakib-hasan-830334224" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a> | 
-        <a href="https://github.com/shsakib0002" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
-    </footer>
+  <!-- Back to Top -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">
+    <i data-lucide="chevron-up" style="width:20px;height:20px"></i>
+  </button>
+
+  <!-- Toast -->
+  <div class="toast" id="toast">
+    <span class="toast-icon">✓</span>
+    <span id="toastMsg">Message sent successfully!</span>
+  </div>
+
+  <script>
+    // Initialize Lucide icons
+    lucide.createIcons();
+
+    // Navbar scroll effect
+    const navbar = document.getElementById('navbar');
+    const backToTop = document.getElementById('backToTop');
+    
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+      if (window.scrollY > 400) {
+        backToTop.classList.add('visible');
+      } else {
+        backToTop.classList.remove('visible');
+      }
+    });
+
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+
+    // Mobile menu
+    const mobileToggle = document.getElementById('mobileToggle');
+    const navLinks = document.getElementById('navLinks');
+    const mobileOverlay = document.getElementById('mobileOverlay');
+
+    function toggleMenu() {
+      mobileToggle.classList.toggle('active');
+      navLinks.classList.toggle('open');
+      mobileOverlay.classList.toggle('active');
+      document.body.style.overflow = navLinks.classList.contains('open') ? 'hidden' : '';
+    }
+
+    mobileToggle.addEventListener('click', toggleMenu);
+    mobileOverlay.addEventListener('click', toggleMenu);
+
+    navLinks.querySelectorAll('a').forEach(link => {
+      link.addEventListener('click', () => {
+        if (navLinks.classList.contains('open')) toggleMenu();
+      });
+    });
+
+    // Animated counters
+    const counters = document.querySelectorAll('.stat-number[data-target]');
+    const counterObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const el = entry.target;
+          const target = parseInt(el.dataset.target);
+          let current = 0;
+          const increment = target / 60;
+          const timer = setInterval(() => {
+            current += increment;
+            if (current >= target) {
+              el.textContent = target + '+';
+              clearInterval(timer);
+            } else {
+              el.textContent = Math.floor(current) + '+';
+            }
+          }, 30);
+          counterObserver.unobserve(el);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    counters.forEach(c => counterObserver.observe(c));
+
+    // Scroll reveal animation
+    const revealElements = document.querySelectorAll('.card, .experience-item, .about-grid, .skills-grid');
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+    revealElements.forEach(el => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(24px)';
+      el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
+      revealObserver.observe(el);
+    });
+  </script>
 </body>
 </html>
