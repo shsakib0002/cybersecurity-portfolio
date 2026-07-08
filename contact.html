@@ -1,49 +1,206 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact | Sakib Hasan</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact — MD. Sakib Hasan</title>
+  <meta name="description" content="Get in touch with MD. Sakib Hasan for cybersecurity consulting, network engineering, or collaboration opportunities.">
+  <meta property="og:title" content="Contact — Sakib Hasan">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav class="navbar">
-        <h1 class="logo"><a href="index.html" style="color: #e60000; text-decoration: none;">Sakib Hasan</a></h1>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="certifications.html">Certifications</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
 
+  <nav class="navbar" id="navbar">
     <div class="container">
-        <h2><i class="fa-solid fa-envelope-open-text"></i> Contact Me</h2>
-        <p>Let's connect! I'm always open to discussing enterprise infrastructure, cloud operations, or sharing insights.</p>
-        
-        <div class="card">
-            <ul style="list-style: none; padding: 0;">
-                <li style="margin-bottom: 10px;"><strong>Email:</strong> <a href="mailto:sakibhasan.infosec@gmail.com" style="color: #e60000; text-decoration: none;">sakibhasan.infosec@gmail.com</a></li>
-                <li style="margin-bottom: 10px;"><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/md-sakib-hasan-830334224" target="_blank" style="color: #e60000; text-decoration: none;">md-sakib-hasan</a></li>
-                <li style="margin-bottom: 10px;"><strong>GitHub:</strong> <a href="https://github.com/shsakib0002" target="_blank" style="color: #e60000; text-decoration: none;">shsakib0002</a></li>
-            </ul>
-        </div>
-
-        <!-- Contact Form -->
-        <form action="https://formspree.io/f/your_formspree_id" method="POST" class="contact-form" style="margin-top: 20px;">
-            <input type="text" name="name" placeholder="Name" required style="width: 100%; padding: 10px; margin-bottom: 10px; background: #111; color: white; border: 1px solid #333;">
-            <input type="email" name="email" placeholder="Email" required style="width: 100%; padding: 10px; margin-bottom: 10px; background: #111; color: white; border: 1px solid #333;">
-            <textarea name="message" placeholder="Message" rows="5" required style="width: 100%; padding: 10px; margin-bottom: 10px; background: #111; color: white; border: 1px solid #333;"></textarea>
-            <button type="submit" style="background: #e60000; color: white; border: none; padding: 10px 20px; cursor: pointer; font-weight: bold;">Send Message</button>
-        </form>
+      <a href="index.html" class="nav-logo"><div class="logo-icon">S</div>Sakib<span>.</span>Sec</a>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="certifications.html">Certifications</a>
+        <a href="blog.html">Blog</a>
+        <a href="resume.html">Resume</a>
+        <a href="contact.html" class="active">Contact</a>
+      </div>
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
     </div>
+  </nav>
+  <div class="mobile-overlay" id="mobileOverlay"></div>
 
-    <footer class="footer">
-        <a href="mailto:sakibhasan.infosec@gmail.com"><i class="fa-solid fa-envelope"></i> Email</a> | 
-        <a href="https://www.linkedin.com/in/md-sakib-hasan-830334224" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a> | 
-        <a href="https://github.com/shsakib0002" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
-    </footer>
+  <div class="page-header">
+    <div class="container">
+      <div class="page-breadcrumb"><a href="index.html">Home</a><span class="separator">/</span><span>Contact</span></div>
+      <h1>Get In <span class="text-accent">Touch</span></h1>
+      <p>Have a project in mind or want to discuss cybersecurity? I'd love to hear from you.</p>
+    </div>
+  </div>
+
+  <section style="padding-top:20px">
+    <div class="container">
+      <div class="contact-grid">
+        <div class="contact-info">
+          <h2>Let's Work Together</h2>
+          <p>
+            Whether you need help with network infrastructure security, RF engineering consulting, 
+            penetration testing, or just want to discuss the latest vulnerabilities — I'm always 
+            open to meaningful conversations and collaborations.
+          </p>
+          <div class="contact-methods">
+            <div class="contact-method">
+              <div class="contact-method-icon"><i data-lucide="mail" style="width:20px;height:20px"></i></div>
+              <div class="contact-method-text">
+                <h4>Email</h4>
+                <p>sakib@example.com</p>
+              </div>
+            </div>
+            <div class="contact-method">
+              <div class="contact-method-icon" style="background:rgba(59,130,246,0.08);border-color:rgba(59,130,246,0.12);color:var(--blue)"><i data-lucide="linkedin" style="width:20px;height:20px"></i></div>
+              <div class="contact-method-text">
+                <h4>LinkedIn</h4>
+                <p>linkedin.com/in/shsakib0002</p>
+              </div>
+            </div>
+            <div class="contact-method">
+              <div class="contact-method-icon" style="background:rgba(163,163,163,0.08);border-color:rgba(163,163,163,0.12);color:var(--text-secondary)"><i data-lucide="github" style="width:20px;height:20px"></i></div>
+              <div class="contact-method-text">
+                <h4>GitHub</h4>
+                <p>github.com/shsakib0002</p>
+              </div>
+            </div>
+            <div class="contact-method">
+              <div class="contact-method-icon" style="background:rgba(34,197,94,0.08);border-color:rgba(34,197,94,0.12);color:var(--green)"><i data-lucide="map-pin" style="width:20px;height:20px"></i></div>
+              <div class="contact-method-text">
+                <h4>Location</h4>
+                <p>Bangladesh</p>
+              </div>
+            </div>
+          </div>
+          <div class="contact-socials">
+            <a href="https://github.com/shsakib0002" target="_blank" rel="noopener" class="social-link" aria-label="GitHub"><i data-lucide="github" style="width:18px;height:18px"></i></a>
+            <a href="#" class="social-link" aria-label="LinkedIn"><i data-lucide="linkedin" style="width:18px;height:18px"></i></a>
+            <a href="#" class="social-link" aria-label="Twitter"><i data-lucide="twitter" style="width:18px;height:18px"></i></a>
+            <a href="mailto:sakib@example.com" class="social-link" aria-label="Email"><i data-lucide="mail" style="width:18px;height:18px"></i></a>
+          </div>
+        </div>
+        <form class="contact-form" id="contactForm" onsubmit="handleSubmit(event)">
+          <div class="form-row">
+            <div class="form-group">
+              <label for="name">Full Name *</label>
+              <input type="text" id="name" name="name" placeholder="John Doe" required>
+            </div>
+            <div class="form-group">
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" name="email" placeholder="john@example.com" required>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject *</label>
+            <select id="subject" name="subject" required>
+              <option value="" disabled selected>Select a topic</option>
+              <option value="security">Cybersecurity Consulting</option>
+              <option value="network">Network Engineering</option>
+              <option value="rf">RF/WISP Consulting</option>
+              <option value="pentest">Penetration Testing</option>
+              <option value="collaboration">Collaboration</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Message *</label>
+            <textarea id="message" name="message" rows="6" placeholder="Tell me about your project or inquiry..." required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" style="width:100%;justify-content:center" id="submitBtn">
+            <i data-lucide="send" style="width:16px;height:16px"></i>
+            Send Message
+          </button>
+          <p style="text-align:center;font-size:12px;color:var(--text-muted);margin-top:16px">
+            I'll respond within 24–48 hours. Your information is kept confidential.
+          </p>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo"><div class="logo-icon">S</div>Sakib<span>.</span>Sec</a>
+          <p>Cybersecurity professional & network engineer. Securing infrastructure from the ground up.</p>
+          <div class="contact-socials" style="margin-top:20px">
+            <a href="https://github.com/shsakib0002" target="_blank" rel="noopener" class="social-link" aria-label="GitHub"><i data-lucide="github" style="width:18px;height:18px"></i></a>
+            <a href="#" class="social-link" aria-label="LinkedIn"><i data-lucide="linkedin" style="width:18px;height:18px"></i></a>
+            <a href="mailto:sakib@example.com" class="social-link" aria-label="Email"><i data-lucide="mail" style="width:18px;height:18px"></i></a>
+          </div>
+        </div>
+        <div class="footer-col"><h4>Navigation</h4><ul><li><a href="index.html">Home</a></li><li><a href="projects.html">Projects</a></li><li><a href="certifications.html">Certifications</a></li><li><a href="blog.html">Blog</a></li></ul></div>
+        <div class="footer-col"><h4>More</h4><ul><li><a href="resume.html">Resume</a></li><li><a href="contact.html">Contact</a></li><li><a href="https://github.com/shsakib0002" target="_blank" rel="noopener">GitHub</a></li></ul></div>
+        <div class="footer-col"><h4>Expertise</h4><ul><li><a href="blog.html">RF Engineering</a></li><li><a href="blog.html">Offensive Security</a></li><li><a href="blog.html">Network Security</a></li><li><a href="blog.html">Red Teaming</a></li></ul></div>
+      </div>
+      <div class="footer-bottom"><span>&copy; 2025 MD. Sakib Hasan. All rights reserved.</span><div class="footer-bottom-links"><a href="#">Privacy</a><a href="#">Terms</a></div></div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top"><i data-lucide="chevron-up" style="width:20px;height:20px"></i></button>
+  <div class="toast" id="toast"><span class="toast-icon">✓</span><span id="toastMsg">Message sent!</span></div>
+
+  <script>
+    lucide.createIcons();
+    const navbar = document.getElementById('navbar');
+    const backToTop = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 50);
+      backToTop.classList.toggle('visible', window.scrollY > 400);
+    });
+    backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+    const mobileToggle = document.getElementById('mobileToggle');
+    const navLinks = document.getElementById('navLinks');
+    const mobileOverlay = document.getElementById('mobileOverlay');
+    function toggleMenu() {
+      mobileToggle.classList.toggle('active');
+      navLinks.classList.toggle('open');
+      mobileOverlay.classList.toggle('active');
+      document.body.style.overflow = navLinks.classList.contains('open') ? 'hidden' : '';
+    }
+    mobileToggle.addEventListener('click', toggleMenu);
+    mobileOverlay.addEventListener('click', toggleMenu);
+    navLinks.querySelectorAll('a').forEach(l => l.addEventListener('click', () => { if (navLinks.classList.contains('open')) toggleMenu(); }));
+
+    function showToast(msg) {
+      const t = document.getElementById('toast');
+      document.getElementById('toastMsg').textContent = msg;
+      t.classList.add('show', 'success');
+      setTimeout(() => t.classList.remove('show', 'success'), 4000);
+    }
+
+    function handleSubmit(e) {
+      e.preventDefault();
+      const btn = document.getElementById('submitBtn');
+      btn.innerHTML = '<span style="display:inline-block;width:16px;height:16px;border:2px solid rgba(255,255,255,0.3);border-top-color:white;border-radius:50%;animation:spin 0.6s linear infinite"></span> Sending...';
+      btn.disabled = true;
+      setTimeout(() => {
+        btn.innerHTML = '<i data-lucide="check" style="width:16px;height:16px"></i> Sent!';
+        lucide.createIcons();
+        showToast('Message sent successfully! I\'ll get back to you soon.');
+        document.getElementById('contactForm').reset();
+        setTimeout(() => {
+          btn.innerHTML = '<i data-lucide="send" style="width:16px;height:16px"></i> Send Message';
+          lucide.createIcons();
+          btn.disabled = false;
+        }, 3000);
+      }, 1500);
+    }
+
+    // Add spin animation
+    const style = document.createElement('style');
+    style.textContent = '@keyframes spin{to{transform:rotate(360deg)}}';
+    document.head.appendChild(style);
+  </script>
 </body>
 </html>
