@@ -3,356 +3,430 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blog | MD. SAKIB HASAN</title>
-  
-  <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
-  <link rel="shortcut icon" href="favicon.svg">
+  <title>Blog — MD. Sakib Hasan | Cybersecurity Insights</title>
+  <meta name="description" content="Cybersecurity blog featuring RF engineering insights, vulnerability analysis, tool reviews, and CTF write-ups by MD. Sakib Hasan.">
+  <meta property="og:title" content="Blog — Sakib Hasan Cybersecurity Insights">
+  <meta property="og:description" content="Insights on cybersecurity, RF engineering, vulnerability research, and practical offensive security knowledge.">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
   <link rel="manifest" href="site.webmanifest">
-  
-      <link rel="stylesheet" href="style.css?v=1.22">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Navbar -->
-  <nav class="navbar">
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
     <div class="container">
-      <a href="index.html" class="logo">Sakib Hasan</a>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="projects.html">Projects</a></li>
-        <li><a href="certifications.html">Certifications</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
+      <a href="index.html" class="nav-logo">
+        <div class="logo-icon">S</div>
+        Sakib<span>.</span>Sec
+      </a>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="certifications.html">Certifications</a>
+        <a href="blog.html" class="active">Blog</a>
+        <a href="resume.html">Resume</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </nav>
+  <div class="mobile-overlay" id="mobileOverlay"></div>
 
-  <!-- Blog Section -->
-  <main class="container">
-    <h1><i class="fa-solid fa-blog"></i> Cybersecurity Blog & Insights</h1>
-    
-    <!-- Blog Introduction -->
-    <section class="blog-intro">
-      <h2><i class="fa-solid fa-lightbulb"></i> About My Blog</h2>
-      <p>Welcome to my cybersecurity blog where I share insights, write-ups, and practical knowledge gained from my journey in offensive security. Here you'll find detailed analysis of vulnerabilities, tool reviews, and real-world security scenarios.</p>
-    </section>
+  <!-- Page Header -->
+  <div class="page-header">
+    <div class="container">
+      <div class="page-breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="separator">/</span>
+        <span>Blog</span>
+      </div>
+      <h1>Cybersecurity Blog <span class="text-accent">&</span> Insights</h1>
+      <p>Sharing insights, write-ups, and practical knowledge gained from my journey in offensive security and network engineering.</p>
+    </div>
+  </div>
 
-    <!-- Published Articles -->
-    <section class="published-articles">
-      <h2><i class="fa-solid fa-newspaper"></i> Published Articles</h2>
-      
-      <!-- RF Engineering Article -->
-      <article class="featured-article">
-        <div class="article-meta">
-          <span class="article-date"><i class="fa-solid fa-calendar"></i> January 13, 2025</span>
-          <span class="article-author"><i class="fa-solid fa-user"></i> MD. SAKIB HASAN</span>
-          <span class="article-category-badge">RF Engineering</span>
+  <!-- Blog Content -->
+  <section style="padding-top:20px">
+    <div class="container">
+      <div class="blog-grid">
+        <!-- Main Content -->
+        <div class="blog-main">
+          <!-- Featured Article -->
+          <div class="blog-featured">
+            <div class="card" style="padding:0;overflow:hidden">
+              <div class="blog-featured-image">
+                <div style="position:relative;z-index:2;text-align:center;padding:24px">
+                  <div style="font-size:64px;margin-bottom:12px">📡</div>
+                  <div style="font-size:14px;color:var(--text-muted);font-family:var(--font-mono)">RF ENGINEERING</div>
+                </div>
+              </div>
+              <div class="blog-featured-content">
+                <div class="blog-meta">
+                  <span class="author">MD. Sakib Hasan</span>
+                  <span class="dot"></span>
+                  <span>January 13, 2025</span>
+                  <span class="dot"></span>
+                  <span>12 min read</span>
+                </div>
+                <h2><a href="#rf-article">Mastering the Airwaves: A Deep Dive into WISP RF Technology</a></h2>
+                <p>
+                  As a leading ISP and IIG, our success is built on strategically managed networks spanning 
+                  fiber, licensed microwave, and cutting-edge WISP infrastructure. Working as an Assistant 
+                  Network Engineer on the RF Team at Amber IT, I've gained extensive experience in managing 
+                  complex Wireless Internet Service Provider infrastructure.
+                </p>
+                <div class="experience-tags">
+                  <span class="tag">WISP</span>
+                  <span class="tag">RF Engineering</span>
+                  <span class="tag">MikroTik</span>
+                  <span class="tag">Ubiquiti</span>
+                  <span class="tag">Cambium</span>
+                  <span class="tag">Network Infrastructure</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Full Article: RF Engineering -->
+          <div id="rf-article" class="card" style="margin-bottom:40px;padding:40px">
+            <div class="blog-post-full">
+              <div class="post-header" style="text-align:left;padding:0;margin-bottom:32px">
+                <div class="blog-meta" style="margin-bottom:16px">
+                  <span class="author">MD. Sakib Hasan</span>
+                  <span class="dot"></span>
+                  <span>January 13, 2025</span>
+                  <span class="dot"></span>
+                  <span>RF Engineering</span>
+                </div>
+                <h1 style="font-size:28px">Mastering the Airwaves: A Deep Dive into WISP RF Technology</h1>
+              </div>
+              <div class="post-content">
+                <p>Working as an Assistant Network Engineer on the RF Team at Amber IT, I've gained extensive experience in managing complex Wireless Internet Service Provider (WISP) infrastructure. Our network leverages best-in-class solutions from <strong>Cambium Networks, Ubiquiti, and Mimosa</strong> to deliver high-speed, reliable connectivity in challenging environments.</p>
+                
+                <h2>The Foundation: Key RF Technologies</h2>
+                
+                <h3>1. OFDM & MIMO (The Speed Boost)</h3>
+                <p>All our modern WISP gear utilizes <strong>OFDM</strong> (Orthogonal Frequency-Division Multiplexing) to make signals robust against interference, and <strong>MIMO</strong> (Multiple-Input Multiple-Output) to use multiple antennas for simultaneous data transmission. This combination significantly boosts spectral efficiency and overall throughput.</p>
+                
+                <h3>2. TDMA (The Reliability Engine)</h3>
+                <p>Our PtMP links (Cambium ePMP, Ubiquiti airMAX) employ a proprietary flavor of <strong>Time Division Multiple Access (TDMA)</strong>. Unlike standard Wi-Fi, TDMA schedules precise time slots for each device, drastically reducing collisions, lowering latency, and ensuring fair bandwidth allocation for massive network scalability.</p>
+                
+                <h3>3. Advanced Protocols (Breaking the Limits)</h3>
+                <ul>
+                  <li><strong>Mimosa SRS:</strong> Optimized TDMA for superior interference rejection and an extended frequency range (4.9–6.4 GHz).</li>
+                  <li><strong>Ubiquiti LTU Technology:</strong> Custom silicon for high-capacity PtP backhaul links, achieving 1+ Gbps throughput with ultra-low latency.</li>
+                </ul>
+                
+                <h2>My Role: Assistant Network Engineer — Core & Access</h2>
+                <p>I specialize in the configuration and monitoring of our entire routing stack, including:</p>
+                <ul>
+                  <li><strong>Core Management:</strong> Ensuring robust link performance and fault tolerance for our IIG and fiber backhaul using advanced protocols.</li>
+                  <li><strong>WISP Operations:</strong> Optimizing the wireless access layer, including link budget analysis and frequency planning.</li>
+                  <li><strong>System Configuration:</strong> Expertly configuring and diagnosing MikroTik RouterOS via Winbox across various network tiers.</li>
+                  <li><strong>Support & Deployment:</strong> Providing prompt, effective remote and on-site support, including hands-on troubleshooting and new infrastructure deployment.</li>
+                </ul>
+                
+                <h2>Equipment Expertise</h2>
+                <p>Our device inventory includes a mix of rugged, high-performance equipment:</p>
+                <ul>
+                  <li><strong>Cambium ePMP Force 180/190/200:</strong> Subscriber Modules with excellent price-to-performance ratio, providing 200+ Mbps real-world throughput.</li>
+                  <li><strong>Ubiquiti PowerBeam M5:</strong> High-gain dish antenna for long-range links and superior noise immunity.</li>
+                  <li><strong>Mimosa C5x:</strong> Highly versatile and rugged with modular antenna system (up to 25 dBi) and extended frequency range.</li>
+                  <li><strong>Ubiquiti AirFiber 5X HD:</strong> High-capacity PtP backhaul utilizing custom LTU technology for multi-Gigabit capacity.</li>
+                  <li><strong>Ubiquiti NanoStation M5/M2:</strong> Compact form factor for shorter-range links or discreet installations.</li>
+                </ul>
+                
+                <h2>Key Technical Skills</h2>
+                <div class="experience-tags" style="margin-top:16px">
+                  <span class="tag">RF Planning</span>
+                  <span class="tag">Link Budgeting</span>
+                  <span class="tag">PTP/PTMP</span>
+                  <span class="tag">Spectrum Analysis</span>
+                  <span class="tag">NOC Coordination</span>
+                  <span class="tag">VLANs</span>
+                  <span class="tag">Routing</span>
+                  <span class="tag">Documentation</span>
+                </div>
+                
+                <blockquote>
+                  This experience in RF engineering and network infrastructure management directly complements my cybersecurity goals, providing deep understanding of network architectures that I can leverage in offensive security scenarios.
+                </blockquote>
+              </div>
+            </div>
+          </div>
+
+          <!-- Second Article: SharePoint Zero-Day -->
+          <div class="card" style="margin-bottom:40px;padding:40px">
+            <div class="blog-post-full">
+              <div class="post-header" style="text-align:left;padding:0;margin-bottom:32px">
+                <div class="blog-meta" style="margin-bottom:16px">
+                  <span class="author">Dr. Johannes Ullrich (SANS Institute)</span>
+                  <span class="dot"></span>
+                  <span>July 23, 2025</span>
+                  <span class="dot"></span>
+                  <span style="color:#ef4444;font-weight:600">⚠ Critical Vulnerability</span>
+                </div>
+                <h1 style="font-size:28px">Critical SharePoint Zero-Day Exploited: What You Need to Know About CVE-2025-53770</h1>
+              </div>
+              <div class="post-content">
+                <p><strong>CVE-2025-53770 is likely one of the most critical SharePoint vulnerabilities to date.</strong></p>
+                <p>On Sunday, July 20, Microsoft alerted customers to an actively exploited critical zero-day vulnerability, <code>CVE-2025-53770</code>, affecting SharePoint servers. SharePoint Server 2016, 2019, and the Subscription editions are all susceptible, while SharePoint Online is not affected. Any organizations running on-prem SharePoint are advised to act immediately.</p>
+                <p>Authentication is entirely bypassed by spoofing the Referer header, allowing attackers to upload files, including a web shell. In some cases, researchers are seeing .Net machine keys being stolen so attackers can maintain access even after patching.</p>
+                
+                <h2>Key Points</h2>
+                <ul>
+                  <li><strong>No login required:</strong> Anyone with access to the server can get in, even without a username or password.</li>
+                  <li><strong>Full control:</strong> Attackers can do anything the SharePoint server can do, including reading documents, uploading malware, or attacking other parts of your network.</li>
+                  <li><strong>Silent persistence:</strong> Even if you apply patches, attackers may still have access if they stole the server's keys.</li>
+                </ul>
+                
+                <h2>How the Exploit Works</h2>
+                <p>The vulnerability originated from bypassing mitigations for two previously patched bugs, CVE-2025-49704 and CVE-2025-49706. At the center of the exploit is the <code>ToolPane.aspx</code> endpoint. Attackers found it can be tricked into processing unauthorized requests by sending a spoofed Referer header claiming they're coming from SharePoint's logout page, <code>SignOut.aspx</code>.</p>
+                
+                <h2>Detection and Mitigation</h2>
+                <p>Review your SharePoint logs and endpoint or SIEM alerts. Key indicators to look for include:</p>
+                <ul>
+                  <li>Suspicious requests to <code>/ToolPane.aspx</code></li>
+                  <li>Presence of a web shell (check for <code>spinstall0.aspx</code>)</li>
+                  <li>Unusual server activity from <code>w3wp.exe</code></li>
+                  <li>Known attacker IPs: <code>107.191.58.76</code>, <code>104.238.159.149</code>, <code>96.9.125.147</code></li>
+                </ul>
+                
+                <h2>Immediate Actions Required</h2>
+                <ol>
+                  <li>Apply Microsoft's latest security updates</li>
+                  <li>Enable AMSI and update antivirus</li>
+                  <li>Rotate your machine keys</li>
+                  <li>Isolate vulnerable servers if needed</li>
+                  <li>Reset credentials and review access</li>
+                  <li>Run threat hunts and EDR scans</li>
+                  <li>Check backups and logging</li>
+                </ol>
+                
+                <blockquote>
+                  <strong>Source:</strong> This analysis is based on research by <strong>Dr. Johannes Ullrich</strong>, Dean of Research for SANS Technology Institute and founder of the Internet Storm Center (DShield.org).
+                </blockquote>
+              </div>
+            </div>
+          </div>
+
+          <!-- Article Grid (Upcoming) -->
+          <div class="section-header" style="text-align:left;margin-bottom:32px">
+            <h2 class="section-title" style="font-size:24px">Upcoming Articles</h2>
+          </div>
+          <div class="blog-articles-grid" style="margin-bottom:20px">
+            <div class="card blog-article-card">
+              <div class="experience-tags" style="margin-bottom:12px">
+                <span class="tag blue">Web Security</span>
+              </div>
+              <h3><a href="#">SQL Injection Deep Dive</a></h3>
+              <p>Comprehensive guide to SQL injection techniques, detection methods, and prevention strategies with practical examples.</p>
+              <div class="upcoming-tags">
+                <span class="tag neutral">SQLMap</span>
+                <span class="tag neutral">Burp Suite</span>
+                <span class="tag neutral">OWASP</span>
+              </div>
+            </div>
+            <div class="card blog-article-card">
+              <div class="experience-tags" style="margin-bottom:12px">
+                <span class="tag blue">Web Security</span>
+              </div>
+              <h3><a href="#">XSS Attack Vectors</a></h3>
+              <p>Exploring different types of Cross-Site Scripting attacks, payloads, and real-world exploitation scenarios.</p>
+              <div class="upcoming-tags">
+                <span class="tag neutral">XSS</span>
+                <span class="tag neutral">JavaScript</span>
+                <span class="tag neutral">Payloads</span>
+              </div>
+            </div>
+            <div class="card blog-article-card">
+              <div class="experience-tags" style="margin-bottom:12px">
+                <span class="tag purple">Network Security</span>
+              </div>
+              <h3><a href="#">Network Reconnaissance</a></h3>
+              <p>Step-by-step network reconnaissance techniques using Nmap, Wireshark, and other essential tools.</p>
+              <div class="upcoming-tags">
+                <span class="tag neutral">Nmap</span>
+                <span class="tag neutral">Wireshark</span>
+                <span class="tag neutral">Recon</span>
+              </div>
+            </div>
+            <div class="card blog-article-card">
+              <div class="experience-tags" style="margin-bottom:12px">
+                <span class="tag yellow">CTF Challenges</span>
+              </div>
+              <h3><a href="#">CTF Write-ups</a></h3>
+              <p>Detailed walkthroughs of CTF challenges, including web exploitation, forensics, and reverse engineering.</p>
+              <div class="upcoming-tags">
+                <span class="tag neutral">CTF</span>
+                <span class="tag neutral">TryHackMe</span>
+                <span class="tag neutral">HackTheBox</span>
+              </div>
+            </div>
+            <div class="card blog-article-card">
+              <div class="experience-tags" style="margin-bottom:12px">
+                <span class="tag green">Tools & Setup</span>
+              </div>
+              <h3><a href="#">Tool Reviews & Setup</a></h3>
+              <p>In-depth reviews of cybersecurity tools, installation guides, and optimal configuration for penetration testing.</p>
+              <div class="upcoming-tags">
+                <span class="tag neutral">Kali Linux</span>
+                <span class="tag neutral">Tools</span>
+                <span class="tag neutral">Setup</span>
+              </div>
+            </div>
+            <div class="card blog-article-card">
+              <div class="experience-tags" style="margin-bottom:12px">
+                <span class="tag">Red Teaming</span>
+              </div>
+              <h3><a href="#">Red Team Methodology</a></h3>
+              <p>Understanding red team operations, attack frameworks, and advanced adversary simulation techniques.</p>
+              <div class="upcoming-tags">
+                <span class="tag neutral">Red Team</span>
+                <span class="tag neutral">MITRE ATT&CK</span>
+                <span class="tag neutral">Adversary</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Subscribe -->
+          <div class="subscribe-box">
+            <h3>Stay Updated</h3>
+            <p>Get notified when new articles are published. Join the cybersecurity community!</p>
+            <form class="subscribe-form" onsubmit="event.preventDefault(); showToast('Subscribed successfully!')">
+              <input type="email" placeholder="Enter your email" required>
+              <button type="submit" class="btn btn-primary btn-sm">Subscribe</button>
+            </form>
+          </div>
         </div>
-        
-        <h3 class="article-title">
-          <i class="fa-solid fa-broadcast-tower"></i>
-          Mastering the Airwaves: A Deep Dive into WISP RF Technology
-        </h3>
-        
-        <div class="article-content">
-          <p class="article-intro">
-            <strong>As a leading ISP and IIG, our success is built on strategically managed networks spanning fiber, licensed microwave, and cutting-edge WISP infrastructure.</strong>
-          </p>
-          
-          <p>
-            Working as an Assistant Network Engineer on the RF Team at Amber IT, I've gained extensive experience in managing complex Wireless Internet Service Provider (WISP) infrastructure. Our network leverages best-in-class solutions from Cambium Networks, Ubiquiti, and Mimosa to deliver high-speed, reliable connectivity in challenging environments.
-          </p>
-          
-          <h4><i class="fa-solid fa-cogs"></i> The Foundation: Key RF Technologies</h4>
-          
-          <p><strong>1. OFDM & MIMO (The Speed Boost):</strong></p>
-          <p>All our modern WISP gear utilizes OFDM (Orthogonal Frequency-Division Multiplexing) to make signals robust against interference, and MIMO (Multiple-Input Multiple-Output) to use multiple antennas for simultaneous data transmission. This combination significantly boosts spectral efficiency and overall throughput.</p>
-          
-          <p><strong>2. TDMA (The Reliability Engine):</strong></p>
-          <p>Our PtMP links (Cambium ePMP, Ubiquiti airMAX) employ a proprietary flavor of Time Division Multiple Access (TDMA). Unlike standard Wi-Fi, TDMA schedules precise time slots for each device, drastically reducing collisions, lowering latency, and ensuring fair bandwidth allocation for massive network scalability.</p>
-          
-          <p><strong>3. Advanced Protocols (Breaking the Limits):</strong></p>
-          <ul>
-            <li><strong>Mimosa SRS:</strong> Optimized TDMA for superior interference rejection and an extended frequency range (4.9–6.4 GHz).</li>
-            <li><strong>Ubiquiti LTU Technology:</strong> Custom silicon for high-capacity PtP backhaul links, achieving 1+ Gbps throughput with ultra-low latency.</li>
-          </ul>
-          
-          <div class="article-highlight">
-            <h4><i class="fa-solid fa-lightbulb"></i> My Role: Assistant Network Engineer - Core & Access</h4>
-            <p>I specialize in the configuration and monitoring of our entire routing stack, including:</p>
-            <ul>
-              <li><strong>Core Management:</strong> Ensuring robust link performance and fault tolerance for our IIG and fiber backhaul using advanced protocols.</li>
-              <li><strong>WISP Operations:</strong> Optimizing the wireless access layer, including link budget analysis and frequency planning.</li>
-              <li><strong>System Configuration:</strong> Expertly configuring and diagnosing MikroTik RouterOS via Winbox across various network tiers.</li>
-              <li><strong>Support & Deployment:</strong> Providing prompt, effective remote and on-site support, including hands-on troubleshooting and new infrastructure deployment.</li>
+
+        <!-- Sidebar -->
+        <aside class="blog-sidebar">
+          <div class="card sidebar-card">
+            <h3>Categories</h3>
+            <ul class="category-list">
+              <li><a href="#">Web Security <span class="category-count">2</span></a></li>
+              <li><a href="#">Network Security <span class="category-count">1</span></a></li>
+              <li><a href="#">CTF Challenges <span class="category-count">1</span></a></li>
+              <li><a href="#">Tools & Setup <span class="category-count">1</span></a></li>
+              <li><a href="#">RF Engineering <span class="category-count">2</span></a></li>
+              <li><a href="#">Red Teaming <span class="category-count">1</span></a></li>
             </ul>
           </div>
-          
-          <h4><i class="fa-solid fa-network-wired"></i> Equipment Expertise</h4>
-          <p>Our device inventory includes a mix of rugged, high-performance equipment:</p>
-          <ul>
-            <li><strong>Cambium ePMP Force 180/190/200:</strong> Subscriber Modules with excellent price-to-performance ratio, providing 200+ Mbps real-world throughput.</li>
-            <li><strong>Ubiquiti PowerBeam M5:</strong> High-gain dish antenna for long-range links and superior noise immunity.</li>
-            <li><strong>Mimosa C5x:</strong> Highly versatile and rugged with modular antenna system (up to 25 dBi) and extended frequency range.</li>
-            <li><strong>Ubiquiti AirFiber 5X HD:</strong> High-capacity PtP backhaul utilizing custom LTU technology for multi-Gigabit capacity.</li>
-            <li><strong>Ubiquiti NanoStation M5/M2:</strong> Compact form factor for shorter-range links or discreet installations.</li>
-          </ul>
-          
-          <div class="article-action">
-            <h4><i class="fa-solid fa-tools"></i> Key Technical Skills:</h4>
-            <ul>
-              <li>RF planning, link budgeting, and optimization for PTP/PTMP connections</li>
-              <li>Microwave/antenna radio installation, alignment, and testing</li>
-              <li>LOS surveys and site surveys for optimal placement</li>
-              <li>Spectrum analysis and interference troubleshooting</li>
-              <li>NOC coordination for incident response and maintenance</li>
-              <li>L2/L3 network device configuration (VLANs, trunks, routing basics)</li>
-              <li>Documentation: site survey reports, change logs, cable/rack diagrams</li>
+          <div class="card sidebar-card">
+            <h3>Upcoming</h3>
+            <ul class="upcoming-list">
+              <li>
+                <h4>SQL Injection Deep Dive</h4>
+                <p>Comprehensive guide with practical examples</p>
+                <div class="upcoming-tags"><span class="tag neutral">SQLMap</span><span class="tag neutral">OWASP</span></div>
+              </li>
+              <li>
+                <h4>XSS Attack Vectors</h4>
+                <p>Real-world exploitation scenarios</p>
+                <div class="upcoming-tags"><span class="tag neutral">XSS</span><span class="tag neutral">Payloads</span></div>
+              </li>
+              <li>
+                <h4>Network Reconnaissance</h4>
+                <p>Nmap, Wireshark techniques</p>
+                <div class="upcoming-tags"><span class="tag neutral">Nmap</span><span class="tag neutral">Recon</span></div>
+              </li>
+              <li>
+                <h4>Core Network Architecture</h4>
+                <p>OSPF/BGP routing deep dive</p>
+                <div class="upcoming-tags"><span class="tag neutral">BGP</span><span class="tag neutral">OSPF</span></div>
+              </li>
             </ul>
           </div>
-          
-          <p>This experience in RF engineering and network infrastructure management directly complements my cybersecurity goals, providing deep understanding of network architectures that I can leverage in offensive security scenarios.</p>
-          
-          <div class="article-tags">
-            <span class="tag">WISP</span>
-            <span class="tag">RF Engineering</span>
-            <span class="tag">MikroTik</span>
-            <span class="tag">Ubiquiti</span>
-            <span class="tag">Cambium</span>
-            <span class="tag">Network Infrastructure</span>
+          <div class="card sidebar-card" style="background:linear-gradient(135deg, rgba(220,38,38,0.08), rgba(220,38,38,0.02));border-color:rgba(220,38,38,0.15)">
+            <h3 style="border-color:rgba(220,38,38,0.2)">About This Blog</h3>
+            <p style="font-size:13px;color:var(--text-secondary);line-height:1.7">
+              Sharing insights, write-ups, and practical knowledge gained from my journey in offensive security. Here you'll find detailed analysis of vulnerabilities, tool reviews, and real-world security scenarios.
+            </p>
           </div>
-        </div>
-      </article>
-      
-      <!-- Featured Article -->
-      <article class="featured-article">
-        <div class="article-meta">
-          <span class="article-date"><i class="fa-solid fa-calendar"></i> July 23, 2025</span>
-          <span class="article-author"><i class="fa-solid fa-user"></i> Dr. Johannes Ullrich (SANS Institute)</span>
-          <span class="article-category-badge">Critical Vulnerability</span>
-        </div>
-        
-        <h3 class="article-title">
-          <i class="fa-solid fa-exclamation-triangle"></i>
-          Critical SharePoint Zero-Day Exploited: What You Need to Know About CVE-2025-53770
-        </h3>
-        
-        <div class="article-content">
-          <p class="article-intro">
-            <strong>CVE-2025-53770 is likely one of the most critical SharePoint vulnerabilities to date.</strong>
-          </p>
-          
-          <p>
-            On Sunday, July 20, Microsoft alerted customers to an actively exploited critical zero-day vulnerability, CVE-2025-53770, affecting SharePoint servers. SharePoint Server 2016, 2019, and the Subscription editions are all susceptible, while SharePoint Online is not affected. Any organizations running on-prem SharePoint are advised to act immediately.
-          </p>
-          
-          <p>
-            Authentication is entirely bypassed by spoofing the Referer header, allowing attackers to upload files, including a web shell. In some cases, researchers are seeing .Net machine keys being stolen so attackers can maintain access even after patching.
-          </p>
-          
-          <div class="article-highlight">
-            <h4><i class="fa-solid fa-lightbulb"></i> Key Points:</h4>
-            <ul>
-              <li><strong>No login required:</strong> Anyone with access to the server can get in, even without a username or password.</li>
-              <li><strong>Full control:</strong> Attackers can do anything the SharePoint server can do, including reading documents, uploading malware, or attacking other parts of your network.</li>
-              <li><strong>Silent persistence:</strong> Even if you apply patches, attackers may still have access if they stole the server's keys.</li>
-            </ul>
-          </div>
-          
-          <h4><i class="fa-solid fa-cogs"></i> How the Exploit Works</h4>
-          <p>
-            The vulnerability originated from bypassing mitigations for two previously patched bugs, CVE-2025-49704 and CVE-2025-49706. At the center of the exploit is the ToolPane.aspx endpoint. Attackers found it can be tricked into processing unauthorized requests by sending a spoofed Referer header claiming they're coming from SharePoint's logout page, SignOut.aspx.
-          </p>
-          
-          <h4><i class="fa-solid fa-shield-alt"></i> Detection and Mitigation</h4>
-          <p>
-            Review your SharePoint logs and endpoint or SIEM alerts. Key indicators to look for include:
-          </p>
-          <ul>
-            <li>Suspicious requests to /ToolPane.aspx</li>
-            <li>Presence of a web shell (check for spinstall0.aspx)</li>
-            <li>Unusual server activity from w3wp.exe</li>
-            <li>Known attacker IPs: 107.191.58.76, 104.238.159.149, 96.9.125.147</li>
-          </ul>
-          
-          <div class="article-action">
-            <h4><i class="fa-solid fa-tools"></i> Immediate Actions Required:</h4>
-            <ol>
-              <li>Apply Microsoft's latest security updates</li>
-              <li>Enable AMSI and update antivirus</li>
-              <li>Rotate your machine keys</li>
-              <li>Isolate vulnerable servers if needed</li>
-              <li>Reset credentials and review access</li>
-              <li>Run threat hunts and EDR scans</li>
-              <li>Check backups and logging</li>
-            </ol>
-          </div>
-          
-          <div class="article-source">
-            <p><i class="fa-solid fa-link"></i> <strong>Source:</strong> This analysis is based on research by <strong>Dr. Johannes Ullrich</strong>, Dean of Research for SANS Technology Institute and founder of the Internet Storm Center (DShield.org).</p>
-          </div>
-        </div>
-      </article>
-    </section>
-
-    <!-- Upcoming Articles -->
-    <section class="upcoming-articles">
-      <h2><i class="fa-solid fa-calendar-alt"></i> Upcoming Articles</h2>
-      <div class="article-grid">
-        <div class="article-card">
-          <div class="article-header">
-            <i class="fa-solid fa-bug"></i>
-            <h3>SQL Injection Deep Dive</h3>
-            <span class="article-category">Web Security</span>
-          </div>
-          <p class="article-description">Comprehensive guide to SQL injection techniques, detection methods, and prevention strategies with practical examples.</p>
-          <div class="article-tags">
-            <span class="tag">SQLMap</span>
-            <span class="tag">Burp Suite</span>
-            <span class="tag">OWASP</span>
-          </div>
-        </div>
-
-        <div class="article-card">
-          <div class="article-header">
-            <i class="fa-solid fa-shield-virus"></i>
-            <h3>XSS Attack Vectors</h3>
-            <span class="article-category">Web Security</span>
-          </div>
-          <p class="article-description">Exploring different types of Cross-Site Scripting attacks, payloads, and real-world exploitation scenarios.</p>
-          <div class="article-tags">
-            <span class="tag">XSS</span>
-            <span class="tag">JavaScript</span>
-            <span class="tag">Payloads</span>
-          </div>
-        </div>
-
-        <div class="article-card">
-          <div class="article-header">
-            <i class="fa-solid fa-network-wired"></i>
-            <h3>Network Reconnaissance</h3>
-            <span class="article-category">Network Security</span>
-          </div>
-          <p class="article-description">Step-by-step network reconnaissance techniques using Nmap, Wireshark, and other essential tools.</p>
-          <div class="article-tags">
-            <span class="tag">Nmap</span>
-            <span class="tag">Wireshark</span>
-            <span class="tag">Recon</span>
-          </div>
-        </div>
-
-        <div class="article-card">
-          <div class="article-header">
-            <i class="fa-solid fa-trophy"></i>
-            <h3>CTF Write-ups</h3>
-            <span class="article-category">Capture The Flag</span>
-          </div>
-          <p class="article-description">Detailed walkthroughs of CTF challenges, including web exploitation, forensics, and reverse engineering.</p>
-          <div class="article-tags">
-            <span class="tag">CTF</span>
-            <span class="tag">TryHackMe</span>
-            <span class="tag">HackTheBox</span>
-          </div>
-        </div>
-
-        <div class="article-card">
-          <div class="article-header">
-            <i class="fa-solid fa-tools"></i>
-            <h3>Tool Reviews & Setup</h3>
-            <span class="article-category">Tools & Setup</span>
-          </div>
-          <p class="article-description">In-depth reviews of cybersecurity tools, installation guides, and optimal configuration for penetration testing.</p>
-          <div class="article-tags">
-            <span class="tag">Kali Linux</span>
-            <span class="tag">Tools</span>
-            <span class="tag">Setup</span>
-          </div>
-        </div>
-
-        <div class="article-card">
-          <div class="article-header">
-            <i class="fa-solid fa-user-secret"></i>
-            <h3>Red Team Methodology</h3>
-            <span class="article-category">Red Teaming</span>
-          </div>
-          <p class="article-description">Understanding red team operations, attack frameworks, and advanced adversary simulation techniques.</p>
-          <div class="article-tags">
-            <span class="tag">Red Team</span>
-            <span class="tag">MITRE ATT&CK</span>
-            <span class="tag">Adversary</span>
-          </div>
-        </div>
-
-        <div class="article-card">
-          <div class="article-header">
-            <i class="fa-solid fa-broadcast-tower"></i>
-            <h3>Core Network Architecture</h3>
-            <span class="article-category">RF Engineering</span>
-          </div>
-          <p class="article-description">Deep dive into ISP core network design, OSPF/BGP routing, and subscriber management systems.</p>
-          <div class="article-tags">
-            <span class="tag">Core Network</span>
-            <span class="tag">BGP</span>
-            <span class="tag">OSPF</span>
-          </div>
-        </div>
+        </aside>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Blog Categories -->
-    <section class="blog-categories">
-      <h2><i class="fa-solid fa-tags"></i> Blog Categories</h2>
-      <div class="category-grid">
-        <div class="category-card">
-          <i class="fa-solid fa-bug"></i>
-          <h3>Web Security</h3>
-          <p>OWASP Top 10, web vulnerabilities, and exploitation techniques</p>
-        </div>
-        <div class="category-card">
-          <i class="fa-solid fa-network-wired"></i>
-          <h3>Network Security</h3>
-          <p>Network reconnaissance, packet analysis, and network exploitation</p>
-        </div>
-        <div class="category-card">
-          <i class="fa-solid fa-trophy"></i>
-          <h3>CTF Challenges</h3>
-          <p>Capture The Flag write-ups and challenge solutions</p>
-        </div>
-        <div class="category-card">
-          <i class="fa-solid fa-tools"></i>
-          <h3>Tools & Setup</h3>
-          <p>Cybersecurity tool reviews and configuration guides</p>
-        </div>
-        <div class="category-card">
-          <i class="fa-solid fa-broadcast-tower"></i>
-          <h3>RF Engineering</h3>
-          <p>Wireless ISP technology, network infrastructure, and RF optimization</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- Newsletter Signup -->
-    <section class="newsletter">
-      <h2><i class="fa-solid fa-envelope-open-text"></i> Stay Updated</h2>
-      <p>Get notified when new articles are published. Join the cybersecurity community!</p>
-      <div class="newsletter-form">
-        <input type="email" placeholder="Enter your email address" class="newsletter-input">
-        <button class="btn newsletter-btn">Subscribe</button>
-      </div>
-    </section>
-  </main>
-
+  <!-- Footer -->
   <footer class="footer">
     <div class="container">
-      <p>
-        <a href="mailto:sakibhasan.infosec@gmail.com"><i class="fa-solid fa-envelope"></i> Email</a>
-        |
-        <a href="https://www.linkedin.com/in/md-sakib-hasan-infosec" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a>
-        |
-        <a href="https://github.com/" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
-      </p>
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo"><div class="logo-icon">S</div>Sakib<span>.</span>Sec</a>
+          <p>Cybersecurity professional & network engineer. Securing infrastructure from the ground up.</p>
+          <div class="contact-socials" style="margin-top:20px">
+            <a href="https://github.com/shsakib0002" target="_blank" rel="noopener" class="social-link" aria-label="GitHub"><i data-lucide="github" style="width:18px;height:18px"></i></a>
+            <a href="#" class="social-link" aria-label="LinkedIn"><i data-lucide="linkedin" style="width:18px;height:18px"></i></a>
+            <a href="mailto:sakib@example.com" class="social-link" aria-label="Email"><i data-lucide="mail" style="width:18px;height:18px"></i></a>
+          </div>
+        </div>
+        <div class="footer-col"><h4>Navigation</h4><ul><li><a href="index.html">Home</a></li><li><a href="projects.html">Projects</a></li><li><a href="certifications.html">Certifications</a></li><li><a href="blog.html">Blog</a></li></ul></div>
+        <div class="footer-col"><h4>More</h4><ul><li><a href="resume.html">Resume</a></li><li><a href="contact.html">Contact</a></li><li><a href="https://github.com/shsakib0002" target="_blank" rel="noopener">GitHub</a></li></ul></div>
+        <div class="footer-col"><h4>Expertise</h4><ul><li><a href="blog.html">RF Engineering</a></li><li><a href="blog.html">Offensive Security</a></li><li><a href="blog.html">Network Security</a></li><li><a href="blog.html">Red Teaming</a></li></ul></div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2025 MD. Sakib Hasan. All rights reserved.</span>
+        <div class="footer-bottom-links"><a href="#">Privacy</a><a href="#">Terms</a></div>
+      </div>
     </div>
   </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top"><i data-lucide="chevron-up" style="width:20px;height:20px"></i></button>
+  <div class="toast" id="toast"><span class="toast-icon">✓</span><span id="toastMsg">Subscribed!</span></div>
+
+  <script>
+    lucide.createIcons();
+    const navbar = document.getElementById('navbar');
+    const backToTop = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 50);
+      backToTop.classList.toggle('visible', window.scrollY > 400);
+    });
+    backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+    const mobileToggle = document.getElementById('mobileToggle');
+    const navLinks = document.getElementById('navLinks');
+    const mobileOverlay = document.getElementById('mobileOverlay');
+    function toggleMenu() {
+      mobileToggle.classList.toggle('active');
+      navLinks.classList.toggle('open');
+      mobileOverlay.classList.toggle('active');
+      document.body.style.overflow = navLinks.classList.contains('open') ? 'hidden' : '';
+    }
+    mobileToggle.addEventListener('click', toggleMenu);
+    mobileOverlay.addEventListener('click', toggleMenu);
+    navLinks.querySelectorAll('a').forEach(l => l.addEventListener('click', () => { if (navLinks.classList.contains('open')) toggleMenu(); }));
+    function showToast(msg) {
+      const t = document.getElementById('toast');
+      document.getElementById('toastMsg').textContent = msg;
+      t.classList.add('show', 'success');
+      setTimeout(() => t.classList.remove('show', 'success'), 3000);
+    }
+    const revealElements = document.querySelectorAll('.card');
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.05, rootMargin: '0px 0px -30px 0px' });
+    revealElements.forEach(el => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(20px)';
+      el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+      revealObserver.observe(el);
+    });
+  </script>
 </body>
-</html> 
+</html>
