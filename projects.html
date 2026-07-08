@@ -1,46 +1,270 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects | Sakib Hasan</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects — MD. Sakib Hasan | Cybersecurity Projects</title>
+  <meta name="description" content="Cybersecurity and network engineering projects by MD. Sakib Hasan including tools, automations, and security research.">
+  <meta property="og:title" content="Projects — Sakib Hasan">
+  <meta property="og:type" content="website">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav class="navbar">
-        <h1 class="logo"><a href="index.html" style="color: #e60000; text-decoration: none;">Sakib Hasan</a></h1>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="projects.html">Projects</a></li>
-            <li><a href="certifications.html">Certifications</a></li>
-            <li><a href="blog.html">Blog</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
 
+  <nav class="navbar" id="navbar">
     <div class="container">
-        <h2><i class="fa-solid fa-code-branch"></i> Projects & Research</h2>
-
-        <div class="card">
-            <h3 class="project-title">Edge Computing in the Cloud (Thesis)</h3>
-            <p><strong>Description:</strong> Undergraduate thesis exploring how edge computing architectures reduce latency for latency-sensitive applications built on AWS.</p>
-            <p><strong>Technologies Used:</strong> AWS (EC2, VPC, IAM, S3), Cloud Architecture, Edge Paradigms</p>
-            <p><strong>Link:</strong> <a href="https://github.com/shsakib0002/Edge-Computing-in-the-Cloud-Thesis" target="_blank" style="color: #e60000;">View Repository</a></p>
-        </div>
-
-        <div class="card">
-            <h3 class="project-title">RF Signal Classification & Modulation Recognition</h3>
-            <p><strong>Description:</strong> Ongoing thesis applying a CNN–LSTM hybrid deep learning model to classify RF signals and recognize modulation schemes for defense and security applications.</p>
-            <p><strong>Technologies Used:</strong> Deep Learning, CNN-LSTM, Python, RF Signal Processing</p>
-            <p><strong>Status:</strong> In Progress</p>
-        </div>
+      <a href="index.html" class="nav-logo"><div class="logo-icon">S</div>Sakib<span>.</span>Sec</a>
+      <div class="nav-links" id="navLinks">
+        <a href="index.html">Home</a>
+        <a href="projects.html" class="active">Projects</a>
+        <a href="certifications.html">Certifications</a>
+        <a href="blog.html">Blog</a>
+        <a href="resume.html">Resume</a>
+        <a href="contact.html">Contact</a>
+      </div>
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
     </div>
+  </nav>
+  <div class="mobile-overlay" id="mobileOverlay"></div>
 
-    <footer class="footer">
-        <a href="mailto:sakibhasan.infosec@gmail.com"><i class="fa-solid fa-envelope"></i> Email</a> | 
-        <a href="https://www.linkedin.com/in/md-sakib-hasan-830334224" target="_blank"><i class="fa-brands fa-linkedin"></i> LinkedIn</a> | 
-        <a href="https://github.com/shsakib0002" target="_blank"><i class="fa-brands fa-github"></i> GitHub</a>
-    </footer>
+  <div class="page-header">
+    <div class="container">
+      <div class="page-breadcrumb"><a href="index.html">Home</a><span class="separator">/</span><span>Projects</span></div>
+      <h1>My <span class="text-accent">Projects</span></h1>
+      <p>A collection of cybersecurity tools, network automation scripts, and security research projects.</p>
+    </div>
+  </div>
+
+  <section style="padding-top:20px">
+    <div class="container">
+      <!-- Filter -->
+      <div class="projects-filter">
+        <button class="filter-btn active" data-filter="all">All Projects</button>
+        <button class="filter-btn" data-filter="security">Security</button>
+        <button class="filter-btn" data-filter="network">Network</button>
+        <button class="filter-btn" data-filter="tools">Tools</button>
+        <button class="filter-btn" data-filter="automation">Automation</button>
+      </div>
+
+      <div class="projects-grid" id="projectsGrid">
+        <!-- Project 1 -->
+        <div class="card project-card" data-category="network">
+          <div class="project-image">
+            <div class="project-icon">📡</div>
+            <div class="project-overlay"></div>
+          </div>
+          <div class="project-content">
+            <h3>WISP Network Monitoring Dashboard</h3>
+            <p>Real-time monitoring dashboard for WISP infrastructure tracking signal strength, throughput, latency, and uptime across Cambium ePMP and Ubiquiti devices.</p>
+            <div class="project-tags">
+              <span class="tag blue">Network</span>
+              <span class="tag">MikroTik</span>
+              <span class="tag neutral">SNMP</span>
+            </div>
+            <div class="project-links">
+              <a href="#"><i data-lucide="github" style="width:14px;height:14px"></i> Source Code</a>
+              <a href="#"><i data-lucide="external-link" style="width:14px;height:14px"></i> Live Demo</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="card project-card" data-category="security">
+          <div class="project-image" style="background:linear-gradient(135deg, rgba(220,38,38,0.08), var(--bg-card))">
+            <div class="project-icon">🛡️</div>
+            <div class="project-overlay"></div>
+          </div>
+          <div class="project-content">
+            <h3>SharePoint Security Scanner</h3>
+            <p>Automated scanner to detect CVE-2025-53770 and related SharePoint vulnerabilities. Checks for ToolPane.aspx exposure, web shells, and suspicious Referer header patterns.</p>
+            <div class="project-tags">
+              <span class="tag">Security</span>
+              <span class="tag yellow">CVE</span>
+              <span class="tag neutral">Python</span>
+            </div>
+            <div class="project-links">
+              <a href="#"><i data-lucide="github" style="width:14px;height:14px"></i> Source Code</a>
+              <a href="blog.html"><i data-lucide="file-text" style="width:14px;height:14px"></i> Blog Post</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="card project-card" data-category="tools">
+          <div class="project-image" style="background:linear-gradient(135deg, rgba(168,85,247,0.08), var(--bg-card))">
+            <div class="project-icon">🔍</div>
+            <div class="project-overlay"></div>
+          </div>
+          <div class="project-content">
+            <h3>RF Spectrum Analyzer Tool</h3>
+            <p>Python-based tool for analyzing RF spectrum data, identifying interference patterns, and generating frequency planning reports for WISP deployments.</p>
+            <div class="project-tags">
+              <span class="tag purple">Tools</span>
+              <span class="tag">RF Engineering</span>
+              <span class="tag neutral">Python</span>
+            </div>
+            <div class="project-links">
+              <a href="#"><i data-lucide="github" style="width:14px;height:14px"></i> Source Code</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="card project-card" data-category="automation">
+          <div class="project-image" style="background:linear-gradient(135deg, rgba(34,197,94,0.08), var(--bg-card))">
+            <div class="project-icon">⚙️</div>
+            <div class="project-overlay"></div>
+          </div>
+          <div class="project-content">
+            <h3>MikroTik Config Automator</h3>
+            <p>Bash script suite for automated MikroTik RouterOS configuration including VLAN setup, firewall rules, QoS policies, and backup automation via API.</p>
+            <div class="project-tags">
+              <span class="tag green">Automation</span>
+              <span class="tag">MikroTik</span>
+              <span class="tag neutral">Bash</span>
+            </div>
+            <div class="project-links">
+              <a href="#"><i data-lucide="github" style="width:14px;height:14px"></i> Source Code</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 5 -->
+        <div class="card project-card" data-category="security">
+          <div class="project-image" style="background:linear-gradient(135deg, rgba(234,179,8,0.08), var(--bg-card))">
+            <div class="project-icon">🏴</div>
+            <div class="project-overlay"></div>
+          </div>
+          <div class="project-content">
+            <h3>CTF Challenge Solutions</h3>
+            <p>Collection of write-ups and solutions for TryHackMe and HackTheBox challenges covering web exploitation, privilege escalation, forensics, and reverse engineering.</p>
+            <div class="project-tags">
+              <span class="tag yellow">CTF</span>
+              <span class="tag">TryHackMe</span>
+              <span class="tag neutral">HackTheBox</span>
+            </div>
+            <div class="project-links">
+              <a href="blog.html"><i data-lucide="file-text" style="width:14px;height:14px"></i> Write-ups</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 6 -->
+        <div class="card project-card" data-category="network tools">
+          <div class="project-image" style="background:linear-gradient(135deg, rgba(59,130,246,0.08), var(--bg-card))">
+            <div class="project-icon">🌐</div>
+            <div class="project-overlay"></div>
+          </div>
+          <div class="project-content">
+            <h3>Network Recon Toolkit</h3>
+            <p>Modular reconnaissance toolkit combining Nmap, DNS enumeration, and WHOIS lookup into a unified CLI tool with report generation capabilities.</p>
+            <div class="project-tags">
+              <span class="tag blue">Network</span>
+              <span class="tag purple">Tools</span>
+              <span class="tag neutral">Python</span>
+            </div>
+            <div class="project-links">
+              <a href="#"><i data-lucide="github" style="width:14px;height:14px"></i> Source Code</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="index.html" class="nav-logo"><div class="logo-icon">S</div>Sakib<span>.</span>Sec</a>
+          <p>Cybersecurity professional & network engineer. Securing infrastructure from the ground up.</p>
+          <div class="contact-socials" style="margin-top:20px">
+            <a href="https://github.com/shsakib0002" target="_blank" rel="noopener" class="social-link" aria-label="GitHub"><i data-lucide="github" style="width:18px;height:18px"></i></a>
+            <a href="#" class="social-link" aria-label="LinkedIn"><i data-lucide="linkedin" style="width:18px;height:18px"></i></a>
+            <a href="mailto:sakib@example.com" class="social-link" aria-label="Email"><i data-lucide="mail" style="width:18px;height:18px"></i></a>
+          </div>
+        </div>
+        <div class="footer-col"><h4>Navigation</h4><ul><li><a href="index.html">Home</a></li><li><a href="projects.html">Projects</a></li><li><a href="certifications.html">Certifications</a></li><li><a href="blog.html">Blog</a></li></ul></div>
+        <div class="footer-col"><h4>More</h4><ul><li><a href="resume.html">Resume</a></li><li><a href="contact.html">Contact</a></li><li><a href="https://github.com/shsakib0002" target="_blank" rel="noopener">GitHub</a></li></ul></div>
+        <div class="footer-col"><h4>Expertise</h4><ul><li><a href="blog.html">RF Engineering</a></li><li><a href="blog.html">Offensive Security</a></li><li><a href="blog.html">Network Security</a></li><li><a href="blog.html">Red Teaming</a></li></ul></div>
+      </div>
+      <div class="footer-bottom"><span>&copy; 2025 MD. Sakib Hasan. All rights reserved.</span><div class="footer-bottom-links"><a href="#">Privacy</a><a href="#">Terms</a></div></div>
+    </div>
+  </footer>
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top"><i data-lucide="chevron-up" style="width:20px;height:20px"></i></button>
+
+  <script>
+    lucide.createIcons();
+    const navbar = document.getElementById('navbar');
+    const backToTop = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 50);
+      backToTop.classList.toggle('visible', window.scrollY > 400);
+    });
+    backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+    const mobileToggle = document.getElementById('mobileToggle');
+    const navLinks = document.getElementById('navLinks');
+    const mobileOverlay = document.getElementById('mobileOverlay');
+    function toggleMenu() {
+      mobileToggle.classList.toggle('active');
+      navLinks.classList.toggle('open');
+      mobileOverlay.classList.toggle('active');
+      document.body.style.overflow = navLinks.classList.contains('open') ? 'hidden' : '';
+    }
+    mobileToggle.addEventListener('click', toggleMenu);
+    mobileOverlay.addEventListener('click', toggleMenu);
+    navLinks.querySelectorAll('a').forEach(l => l.addEventListener('click', () => { if (navLinks.classList.contains('open')) toggleMenu(); }));
+
+    // Project filtering
+    const filterBtns = document.querySelectorAll('.filter-btn');
+    const projectCards = document.querySelectorAll('.project-card');
+
+    filterBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        filterBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        const filter = btn.dataset.filter;
+        projectCards.forEach(card => {
+          const cats = card.dataset.category;
+          if (filter === 'all' || cats.includes(filter)) {
+            card.style.display = '';
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            requestAnimationFrame(() => {
+              card.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
+              card.style.opacity = '1';
+              card.style.transform = 'translateY(0)';
+            });
+          } else {
+            card.style.display = 'none';
+          }
+        });
+      });
+    });
+
+    // Scroll reveal
+    const revealObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.style.opacity = '1';
+          entry.target.style.transform = 'translateY(0)';
+          revealObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.05, rootMargin: '0px 0px -30px 0px' });
+    projectCards.forEach(el => {
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(20px)';
+      el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+      revealObserver.observe(el);
+    });
+  </script>
 </body>
 </html>
