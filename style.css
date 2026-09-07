@@ -1523,6 +1523,12 @@ section {
   color: var(--accent);
 }
 
+.resume-download-note {
+  margin-top: 16px;
+  color: var(--text-muted);
+  font-size: 12px;
+}
+
 .resume-section {
   margin-bottom: 40px;
 }
@@ -1600,6 +1606,57 @@ section {
   font-size: 13px;
   color: var(--text-secondary);
   line-height: 1.7;
+}
+
+@media print {
+  .navbar,
+  .footer,
+  .back-to-top,
+  .resume-header .btn,
+  .resume-download-note {
+    display: none !important;
+  }
+
+  body {
+    background: #fff;
+    color: #111827;
+  }
+
+  .resume-container {
+    max-width: none;
+  }
+
+  .resume-header,
+  .resume-section .card {
+    background: #fff;
+    border: 0;
+    box-shadow: none;
+    padding: 0;
+  }
+
+  .resume-header {
+    display: block;
+    margin-bottom: 24px;
+  }
+
+  .resume-section {
+    margin-bottom: 22px;
+  }
+
+  .resume-section h2 {
+    color: #111827;
+    border-bottom-color: #9ca3af;
+    margin-bottom: 12px;
+  }
+
+  .resume-item,
+  .resume-skill-category {
+    break-inside: avoid;
+  }
+
+  a {
+    color: #111827;
+  }
 }
 
 /* --- Subscribe Box --- */
