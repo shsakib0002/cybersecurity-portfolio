@@ -86,6 +86,17 @@ a:hover {
   color: #ef4444;
 }
 
+.brand-icon {
+  display: block;
+  width: 18px;
+  height: 18px;
+}
+
+.resume-contact-row .brand-icon {
+  width: 14px;
+  height: 14px;
+}
+
 img {
   max-width: 100%;
   height: auto;
