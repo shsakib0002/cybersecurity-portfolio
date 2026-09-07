@@ -32,13 +32,13 @@ Infrastructure and Network Operations Engineer with hands-on experience supporti
 
 = PROFESSIONAL EXPERIENCE
 
-== Huawei Technologies Bangladesh Ltd. — Network Operations Center Engineer (L1)
+== Huawei Technologies Bangladesh Ltd. — Network Monitoring Engineer, GP UDM Project (Grameenphone SOC)
 #align(right)[*Feb 2026 – Present*] #linebreak() *Grameenphone SOC | Dhaka, Bangladesh*
-- Monitor Huawei 5G Core platforms, including UDM, AAA, ENUM, servers, network devices, and Huawei iMaster MAE.
-- Perform 24×7 infrastructure and network monitoring; identify alarms and abnormal conditions, conduct initial triage, and escalate critical incidents to L2/L3 engineering teams.
-- Analyze system health, infrastructure alarms, and performance KPIs to support incident investigation and service optimization.
-- Assist with network, platform, and infrastructure troubleshooting while coordinating with Huawei, ZTE, Grameenphone, and other technical teams.
-- Prepare incident updates, operational reports, KPI summaries, shift handovers, and technical documentation.
+- Monitor Huawei 5G Core UDM, servers, routers, and storage systems in a 24×7 SOC operational environment to maintain service availability and infrastructure stability.
+- Perform real-time incident detection, alarm analysis, initial troubleshooting, and escalation of service-impacting events according to defined operational and escalation procedures.
+- Analyze network and system alarms, performance indicators, and operational KPIs using Huawei iMaster MAE to identify abnormalities and support incident diagnosis and performance optimization.
+- Coordinate with Huawei, Grameenphone/customer, and cross-functional engineering teams for incident resolution, service restoration, escalation, and progress tracking.
+- Prepare incident updates, operational reports, KPI summaries, and shift-handover documentation, ensuring accurate communication and continuity of 24×7 operations.
 
 == Amber IT Ltd. — Assistant Network Engineer, Radio Frequency
 #align(right)[*Oct 2025 – Feb 2026*] #linebreak() *Dhaka, Bangladesh*
