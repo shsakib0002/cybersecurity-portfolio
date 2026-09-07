@@ -37,7 +37,7 @@
     <div class="container">
       <div class="page-breadcrumb"><a href="index.html">Home</a><span class="separator">/</span><span>Projects</span></div>
       <h1>My <span class="text-accent">Projects</span></h1>
-      <p>A collection of cybersecurity tools, network automation scripts, and security research projects.</p>
+      <p>A selection of security research, cloud computing research, telecom operations, and network engineering work.</p>
     </div>
   </div>
 
@@ -45,135 +45,18 @@
     <div class="container">
       <!-- Filter -->
       <div class="projects-filter">
-        <button class="filter-btn active" data-filter="all">All Projects</button>
-        <button class="filter-btn" data-filter="security">Security</button>
+        <button class="filter-btn active" data-filter="all">All Work</button>
+        <button class="filter-btn" data-filter="security">Security Research</button>
         <button class="filter-btn" data-filter="network">Network</button>
-        <button class="filter-btn" data-filter="tools">Tools</button>
-        <button class="filter-btn" data-filter="automation">Automation</button>
+        <button class="filter-btn" data-filter="tools">Tools & Research</button>
+        <button class="filter-btn" data-filter="automation">Operations</button>
       </div>
 
       <div class="projects-grid" id="projectsGrid">
-        <!-- Project 1 -->
-        <div class="card project-card" data-category="network">
-          <div class="project-image">
-            <div class="project-icon">📡</div>
-            <div class="project-overlay"></div>
-          </div>
-          <div class="project-content">
-            <h3>WISP Network Monitoring Dashboard</h3>
-            <p>Real-time monitoring dashboard for WISP infrastructure tracking signal strength, throughput, latency, and uptime across Cambium ePMP and Ubiquiti devices.</p>
-            <div class="project-tags">
-              <span class="tag blue">Network</span>
-              <span class="tag">MikroTik</span>
-              <span class="tag neutral">SNMP</span>
-            </div>
-            <div class="project-links">
-              <a href="#"><i data-lucide="github" style="width:14px;height:14px"></i> Source Code</a>
-              <a href="#"><i data-lucide="external-link" style="width:14px;height:14px"></i> Live Demo</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 2 -->
-        <div class="card project-card" data-category="security">
-          <div class="project-image" style="background:linear-gradient(135deg, rgba(220,38,38,0.08), var(--bg-card))">
-            <div class="project-icon">🛡️</div>
-            <div class="project-overlay"></div>
-          </div>
-          <div class="project-content">
-            <h3>SharePoint Security Scanner</h3>
-            <p>Automated scanner to detect CVE-2025-53770 and related SharePoint vulnerabilities. Checks for ToolPane.aspx exposure, web shells, and suspicious Referer header patterns.</p>
-            <div class="project-tags">
-              <span class="tag">Security</span>
-              <span class="tag yellow">CVE</span>
-              <span class="tag neutral">Python</span>
-            </div>
-            <div class="project-links">
-              <a href="#"><i data-lucide="github" style="width:14px;height:14px"></i> Source Code</a>
-              <a href="blog.html"><i data-lucide="file-text" style="width:14px;height:14px"></i> Blog Post</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 3 -->
-        <div class="card project-card" data-category="tools">
-          <div class="project-image" style="background:linear-gradient(135deg, rgba(168,85,247,0.08), var(--bg-card))">
-            <div class="project-icon">🔍</div>
-            <div class="project-overlay"></div>
-          </div>
-          <div class="project-content">
-            <h3>RF Spectrum Analyzer Tool</h3>
-            <p>Python-based tool for analyzing RF spectrum data, identifying interference patterns, and generating frequency planning reports for WISP deployments.</p>
-            <div class="project-tags">
-              <span class="tag purple">Tools</span>
-              <span class="tag">RF Engineering</span>
-              <span class="tag neutral">Python</span>
-            </div>
-            <div class="project-links">
-              <a href="#"><i data-lucide="github" style="width:14px;height:14px"></i> Source Code</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 4 -->
-        <div class="card project-card" data-category="automation">
-          <div class="project-image" style="background:linear-gradient(135deg, rgba(34,197,94,0.08), var(--bg-card))">
-            <div class="project-icon">⚙️</div>
-            <div class="project-overlay"></div>
-          </div>
-          <div class="project-content">
-            <h3>MikroTik Config Automator</h3>
-            <p>Bash script suite for automated MikroTik RouterOS configuration including VLAN setup, firewall rules, QoS policies, and backup automation via API.</p>
-            <div class="project-tags">
-              <span class="tag green">Automation</span>
-              <span class="tag">MikroTik</span>
-              <span class="tag neutral">Bash</span>
-            </div>
-            <div class="project-links">
-              <a href="#"><i data-lucide="github" style="width:14px;height:14px"></i> Source Code</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 5 -->
-        <div class="card project-card" data-category="security">
-          <div class="project-image" style="background:linear-gradient(135deg, rgba(234,179,8,0.08), var(--bg-card))">
-            <div class="project-icon">🏴</div>
-            <div class="project-overlay"></div>
-          </div>
-          <div class="project-content">
-            <h3>CTF Challenge Solutions</h3>
-            <p>Collection of write-ups and solutions for TryHackMe and HackTheBox challenges covering web exploitation, privilege escalation, forensics, and reverse engineering.</p>
-            <div class="project-tags">
-              <span class="tag yellow">CTF</span>
-              <span class="tag">TryHackMe</span>
-              <span class="tag neutral">HackTheBox</span>
-            </div>
-            <div class="project-links">
-              <a href="blog.html"><i data-lucide="file-text" style="width:14px;height:14px"></i> Write-ups</a>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 6 -->
-        <div class="card project-card" data-category="network tools">
-          <div class="project-image" style="background:linear-gradient(135deg, rgba(59,130,246,0.08), var(--bg-card))">
-            <div class="project-icon">🌐</div>
-            <div class="project-overlay"></div>
-          </div>
-          <div class="project-content">
-            <h3>Network Recon Toolkit</h3>
-            <p>Modular reconnaissance toolkit combining Nmap, DNS enumeration, and WHOIS lookup into a unified CLI tool with report generation capabilities.</p>
-            <div class="project-tags">
-              <span class="tag blue">Network</span>
-              <span class="tag purple">Tools</span>
-              <span class="tag neutral">Python</span>
-            </div>
-            <div class="project-links">
-              <a href="#"><i data-lucide="github" style="width:14px;height:14px"></i> Source Code</a>
-            </div>
-          </div>
-        </div>
+        <div class="card project-card" data-category="security tools"><div class="project-image"><div class="project-icon">📡</div><div class="project-overlay"></div></div><div class="project-content"><h3>RF Signal Classification & Modulation Recognition</h3><p>MSc security thesis in progress exploring CNN–LSTM hybrid deep learning models for RF signal classification and modulation recognition in defense and security applications.</p><div class="project-tags"><span class="tag">Security Research</span><span class="tag">RF Signals</span><span class="tag neutral">CNN–LSTM</span></div></div></div>
+        <div class="card project-card" data-category="cloud tools"><div class="project-image" style="background:linear-gradient(135deg, rgba(59,130,246,0.08), var(--bg-card))"><div class="project-icon">☁</div><div class="project-overlay"></div></div><div class="project-content"><h3>Edge Computing in the Cloud</h3><p>Cloud computing thesis research on improving latency-sensitive applications through AWS-based edge and distributed infrastructure approaches.</p><div class="project-tags"><span class="tag blue">Cloud</span><span class="tag">AWS</span><span class="tag neutral">Edge Computing</span></div></div></div>
+        <div class="card project-card" data-category="network"><div class="project-image" style="background:linear-gradient(135deg, rgba(34,197,94,0.08), var(--bg-card))"><div class="project-icon">🛰</div><div class="project-overlay"></div></div><div class="project-content"><h3>Telecom Infrastructure Monitoring</h3><p>Operational experience supporting monitoring and incident coordination for Huawei 5G Core platforms, servers, network devices, and infrastructure dashboards in a 24×7 SOC environment.</p><div class="project-tags"><span class="tag green">Operations</span><span class="tag">Huawei 5G Core</span><span class="tag neutral">Monitoring</span></div></div></div>
+        <div class="card project-card" data-category="network tools"><div class="project-image" style="background:linear-gradient(135deg, rgba(168,85,247,0.08), var(--bg-card))"><div class="project-icon">📶</div><div class="project-overlay"></div></div><div class="project-content"><h3>Wireless Network Deployment Support</h3><p>RF engineering work covering link budgeting, spectrum analysis, LOS surveys, microwave alignment, and PTP/PTMP wireless deployment support.</p><div class="project-tags"><span class="tag purple">RF Engineering</span><span class="tag">PTP / PTMP</span><span class="tag neutral">Troubleshooting</span></div></div></div>
       </div>
     </div>
   </section>
@@ -183,18 +66,18 @@
       <div class="footer-grid">
         <div class="footer-brand">
           <a href="index.html" class="nav-logo"><div class="logo-icon">S</div>Sakib<span>.</span>Sec</a>
-          <p>Cybersecurity professional & network engineer. Securing infrastructure from the ground up.</p>
+          <p>Infrastructure and network operations engineer building toward security operations and incident response.</p>
           <div class="contact-socials" style="margin-top:20px">
             <a href="https://github.com/shsakib0002" target="_blank" rel="noopener" class="social-link" aria-label="GitHub"><i data-lucide="github" style="width:18px;height:18px"></i></a>
-            <a href="#" class="social-link" aria-label="LinkedIn"><i data-lucide="linkedin" style="width:18px;height:18px"></i></a>
-            <a href="mailto:sakib@example.com" class="social-link" aria-label="Email"><i data-lucide="mail" style="width:18px;height:18px"></i></a>
+            <a href="https://linkedin.com/in/md-sakib-hasan-infosec" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn"><i data-lucide="linkedin" style="width:18px;height:18px"></i></a>
+            <a href="mailto:sakibhasan.infosec@gmail.com" class="social-link" aria-label="Email"><i data-lucide="mail" style="width:18px;height:18px"></i></a>
           </div>
         </div>
         <div class="footer-col"><h4>Navigation</h4><ul><li><a href="index.html">Home</a></li><li><a href="projects.html">Projects</a></li><li><a href="certifications.html">Certifications</a></li><li><a href="blog.html">Blog</a></li></ul></div>
         <div class="footer-col"><h4>More</h4><ul><li><a href="resume.html">Resume</a></li><li><a href="contact.html">Contact</a></li><li><a href="https://github.com/shsakib0002" target="_blank" rel="noopener">GitHub</a></li></ul></div>
-        <div class="footer-col"><h4>Expertise</h4><ul><li><a href="blog.html">RF Engineering</a></li><li><a href="blog.html">Offensive Security</a></li><li><a href="blog.html">Network Security</a></li><li><a href="blog.html">Red Teaming</a></li></ul></div>
+        <div class="footer-col"><h4>Expertise</h4><ul><li><a href="blog.html">Security Operations</a></li><li><a href="blog.html">Incident Response</a></li><li><a href="blog.html">Network Security</a></li><li><a href="blog.html">Linux Infrastructure</a></li></ul></div>
       </div>
-      <div class="footer-bottom"><span>&copy; 2025 MD. Sakib Hasan. All rights reserved.</span><div class="footer-bottom-links"><a href="#">Privacy</a><a href="#">Terms</a></div></div>
+      <div class="footer-bottom"><span>&copy; 2026 MD. Sakib Hasan. All rights reserved.</span><div class="footer-bottom-links"><a href="#">Privacy</a><a href="#">Terms</a></div></div>
     </div>
   </footer>
 
