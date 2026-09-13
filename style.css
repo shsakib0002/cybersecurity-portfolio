@@ -772,6 +772,63 @@ section {
   margin-bottom: 16px;
 }
 
+.company-identity {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.company-identity > div:last-child {
+  display: grid;
+  gap: 3px;
+}
+
+.company-identity strong {
+  color: var(--text-primary);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.company-identity span {
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+.company-logo {
+  display: grid;
+  place-items: center;
+  flex: 0 0 44px;
+  width: 44px;
+  height: 44px;
+  overflow: hidden;
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  background: #fff;
+  color: #1d4ed8;
+  font-family: var(--font-sans);
+  font-size: 14px;
+  font-weight: 800;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.16);
+}
+
+.company-logo img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.company-logo span {
+  display: none;
+  color: inherit;
+  font-size: 14px;
+}
+
+.company-logo-huawei {
+  padding: 6px;
+  color: #c8102e;
+}
+
 .experience-desc {
   color: var(--text-secondary);
   font-size: 15px;
