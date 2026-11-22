@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blog — MD. Sakib Hasan | Cybersecurity Insights</title>
-  <meta name="description" content="Cybersecurity blog featuring RF engineering insights, vulnerability analysis, tool reviews, and CTF write-ups by MD. Sakib Hasan.">
+  <title>Engineering Notes — MD. Sakib Hasan</title>
+  <meta name="description" content="Technical notes by MD. Sakib Hasan on RF engineering, wireless infrastructure, network operations, and security learning.">
   <meta property="og:title" content="Blog — Sakib Hasan Cybersecurity Insights">
   <meta property="og:description" content="Insights on infrastructure operations, RF engineering, cloud computing, and security development.">
   <meta property="og:type" content="website">
@@ -50,7 +50,7 @@
         <span class="separator">/</span>
         <span>Blog</span>
       </div>
-      <h1>Cybersecurity Blog <span class="text-accent">&</span> Insights</h1>
+      <h1>Engineering Notes <span class="text-accent">&amp;</span> Field Notes</h1>
       <p>Sharing practical notes from infrastructure operations, network engineering, cloud computing, RF systems, and security development.</p>
     </div>
   </div>
@@ -74,7 +74,7 @@
                 <div class="blog-meta">
                   <span class="author">MD. Sakib Hasan</span>
                   <span class="dot"></span>
-                  <span>January 13, 2025</span>
+                  <span>RF Engineering field note</span>
                   <span class="dot"></span>
                   <span>12 min read</span>
                 </div>
@@ -101,48 +101,47 @@
                 <div class="blog-meta" style="margin-bottom:16px">
                   <span class="author">MD. Sakib Hasan</span>
                   <span class="dot"></span>
-                  <span>January 13, 2025</span>
+                  <span>RF Engineering field note</span>
                   <span class="dot"></span>
                   <span>RF Engineering</span>
                 </div>
                 <h1 style="font-size:28px">RF Engineering Field Notes: Planning and Troubleshooting Wireless Links</h1>
               </div>
               <div class="post-content">
-                <p>Working as an Assistant Network Engineer on the RF Team at Amber IT, My role included supporting Wireless Internet Service Provider (WISP) infrastructure through RF planning, link budgeting, spectrum analysis, and troubleshooting. The work involved exposure to platforms from <strong>Cambium Networks, Ubiquiti, and Mimosa</strong> in field deployment and maintenance contexts.</p>
+                <p>In my role as an Assistant Network Engineer on the RF team at Amber IT, I supported wireless internet service provider (WISP) infrastructure through RF planning, link budgeting, spectrum analysis, site surveys, and troubleshooting. The work involved exposure to platforms from <strong>Cambium Networks, Ubiquiti, and Mimosa</strong> in field deployment and maintenance contexts.</p>
                 
-                <h2>The Foundation: Key RF Technologies</h2>
-                
-                <h3>1. OFDM & MIMO (The Speed Boost)</h3>
-                <p>WISP platforms commonly use <strong>OFDM</strong> (Orthogonal Frequency-Division Multiplexing) to make signals robust against interference, and <strong>MIMO</strong> (Multiple-Input Multiple-Output) to use multiple antennas for simultaneous data transmission. This combination significantly boosts spectral efficiency and overall throughput.</p>
-                
-                <h3>2. TDMA (The Reliability Engine)</h3>
-                <p>PtMP links in the environments I supported (Cambium ePMP, Ubiquiti airMAX) employ a proprietary flavor of <strong>Time Division Multiple Access (TDMA)</strong>. Unlike standard Wi-Fi, TDMA schedules precise time slots for each device, drastically reducing collisions, lowering latency, and ensuring fair bandwidth allocation for massive network scalability.</p>
-                
-                <h3>3. Advanced Protocols (Breaking the Limits)</h3>
+                <h2>Practical considerations in wireless deployment</h2>
+                <p>Wireless link quality depends on the radio platform, frequency, channel conditions, antenna configuration, installation quality, and the surrounding RF environment. These factors need to be considered together rather than relying on a device's headline throughput specification.</p>
+
+                <h3>Line of sight and link budget</h3>
+                <p>Site surveys and link-budget checks help assess path feasibility before deployment. Antenna alignment, path clearance, cable and connector losses, and expected fade margin all affect link reliability.</p>
+
+                <h3>Spectrum conditions</h3>
+                <p>Spectrum analysis helps identify noise and potential interference in the local environment. Channel selection and channel width should be considered alongside regulatory requirements, device capabilities, and the needs of nearby links.</p>
+
+                <h3>Point-to-point and point-to-multipoint links</h3>
+                <p>Point-to-point links connect two network locations, while point-to-multipoint deployments serve multiple remote stations from a common access point. The planning and troubleshooting approach differs, particularly around alignment, airtime, capacity, and interference.</p>
+
+                <h2>My Role: RF &amp; Wireless Network Support</h2>
+                <p>During my role as an Assistant Network Engineer in the RF team at Amber IT, I supported wireless access and backhaul activities, including:</p>
                 <ul>
-                  <li><strong>Mimosa SRS:</strong> Optimized TDMA for superior interference rejection and an extended frequency range (4.9–6.4 GHz).</li>
-                  <li><strong>Ubiquiti LTU Technology:</strong> Custom silicon for high-capacity PtP backhaul links, achieving 1+ Gbps throughput with ultra-low latency.</li>
+                  <li>Assisting with RF planning, link budgeting, and frequency review.</li>
+                  <li>Conducting site surveys and line-of-sight checks.</li>
+                  <li>Using spectrum analysis to investigate interference and channel conditions.</li>
+                  <li>Supporting radio and antenna installation, alignment, testing, and troubleshooting.</li>
+                  <li>Coordinating with NOC teams during BTS, RF, and LAN incidents, outages, and maintenance windows.</li>
+                  <li>Validating basic Layer 2/Layer 3 items, including VLANs, trunks, and basic routing where required.</li>
                 </ul>
-                
-                <h2>My Role: Assistant Network Engineer — Core & Access</h2>
-                <p>My responsibilities included supporting routing and wireless operations, including:</p>
+
+                <h2>Platforms encountered</h2>
+                <p>Equipment in the environments I supported included:</p>
                 <ul>
-                  <li><strong>Core Management:</strong> Ensuring robust link performance and fault tolerance for our IIG and fiber backhaul using advanced protocols.</li>
-                  <li><strong>WISP Operations:</strong> Optimizing the wireless access layer, including link budget analysis and frequency planning.</li>
-                  <li><strong>System Configuration:</strong> Configuring and diagnosing MikroTik RouterOS via Winbox across various network tiers.</li>
-                  <li><strong>Support & Deployment:</strong> Providing prompt, effective remote and on-site support, including hands-on troubleshooting and new infrastructure deployment.</li>
+                  <li><strong>Cambium Networks ePMP:</strong> ePMP Force 180, 190, 200, and related platform deployments.</li>
+                  <li><strong>Mimosa:</strong> C5x wireless radios.</li>
+                  <li><strong>Ubiquiti:</strong> PowerBeam M5 radios.</li>
                 </ul>
-                
-                <h2>Equipment Expertise</h2>
-                <p>The field environments I supported included equipment such as:</p>
-                <ul>
-                  <li><strong>Cambium ePMP Force 180/190/200:</strong> Subscriber Modules with excellent price-to-performance ratio, providing 200+ Mbps real-world throughput.</li>
-                  <li><strong>Ubiquiti PowerBeam M5:</strong> High-gain dish antenna for long-range links and superior noise immunity.</li>
-                  <li><strong>Mimosa C5x:</strong> Highly versatile and rugged with modular antenna system (up to 25 dBi) and extended frequency range.</li>
-                  <li><strong>Ubiquiti AirFiber 5X HD:</strong> High-capacity PtP backhaul utilizing custom LTU technology for multi-Gigabit capacity.</li>
-                  <li><strong>Ubiquiti NanoStation M5/M2:</strong> Compact form factor for shorter-range links or discreet installations.</li>
-                </ul>
-                
+                <p class="project-evidence">Exact performance and frequency specifications vary by model, firmware, antenna configuration, and regulatory region. Refer to the relevant vendor documentation for device-specific figures.</p>
+
                 <h2>Key Technical Skills</h2>
                 <div class="experience-tags" style="margin-top:16px">
                   <span class="tag">RF Planning</span>
