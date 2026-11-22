@@ -32,9 +32,10 @@
   </script>
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
 
   <!-- Navigation -->
-  <nav class="navbar" id="navbar">
+  <nav class="navbar" id="navbar" aria-label="Primary navigation">
     <div class="container">
       <a href="index.html" class="nav-logo">
         <div class="logo-icon">S</div>
@@ -59,15 +60,13 @@
   </nav>
   <div class="mobile-overlay" id="mobileOverlay"></div>
 
+  <main id="main-content">
   <!-- Hero Section -->
-  <section class="hero">
+  <section class="hero" aria-labelledby="home-title">
     <div class="container">
       <div class="hero-content">
-        <div class="hero-badge">
-          <span class="pulse-dot"></span>
-          Available for opportunities
-        </div>
-        <h1>Hi, I'm <span class="highlight">Sakib Hasan</span></h1>
+        <div class="hero-badge">TELECOM · INFRASTRUCTURE · SECURITY DEVELOPMENT</div>
+        <h1 id="home-title">Hi, I'm <span class="highlight">Sakib Hasan</span></h1>
         <p class="subtitle">Infrastructure &amp; Network Operations Engineer</p><p class="hero-focus">5G Core · Network Infrastructure · Cloud · Security Operations</p>
         <p class="description">
           Infrastructure and Network Operations Engineer supporting Huawei 5G Core and telecom SOC operations, with hands-on experience across UDM, AAA, ENUM, servers, network devices, and infrastructure monitoring. Currently pursuing an MSc Information Systems Security (MISS) and developing deeper expertise in cloud and security operations.
@@ -87,18 +86,9 @@
         <div class="hero-image-wrapper">
           <div class="hero-image-bg"></div>
           <div class="hero-image">
-            <img src="assets/headshot.jpg" alt="MD. Sakib Hasan" onerror="this.style.display='none';this.parentElement.style.background='linear-gradient(135deg, #1a1a2e, #16213e)';this.parentElement.innerHTML+='<div style=\'display:flex;align-items:center;justify-content:center;height:100%;font-size:80px;color:#dc2626;opacity:0.3\'>SH</div>'">
-            <div class="hero-image-overlay"></div>
+            <img src="assets/headshot.jpg" alt="Portrait of MD. Sakib Hasan" fetchpriority="high" decoding="async">
           </div>
-          <div class="floating-badge badge-top">
-            <div class="badge-icon red"><i data-lucide="layers-3" style="width:18px;height:18px"></i></div>
-            <div><div style="font-size:12px;color:var(--text-muted)">Specialization</div><div>Cloud • Telecom • Security</div></div>
-          </div>
-          <div class="floating-badge badge-bottom">
-            <div class="badge-icon green"><i data-lucide="radio-tower" style="width:18px;height:18px"></i></div>
-            <div><div style="font-size:12px;color:var(--text-muted)">Experience</div><div>Huawei 5G Core Operations</div></div>
-          </div>
-          <div class="floating-badge badge-research"><div class="badge-icon blue"><i data-lucide="brain-circuit" style="width:18px;height:18px"></i></div><div><div style="font-size:12px;color:var(--text-muted)">Research</div><div>RF Machine Learning</div></div></div>
+
         </div>
       </div>
     </div>
@@ -117,42 +107,52 @@
 <!-- RESEARCH_HIGHLIGHT_END -->
 
   <!-- About Section -->
-  <section id="about" class="about-section">
+  <section id="about" class="about-section" aria-labelledby="about-title">
     <div class="container">
       <div class="about-grid">
         <div class="about-text">
           <div class="section-label">About Me</div>
-          <h2 class="section-title" style="text-align:left">Operations-minded infrastructure engineering</h2>
-          <p>I support telecom infrastructure where service availability, disciplined monitoring, and clear escalation matter. My current work spans Huawei 5G Core platforms, telecom SOC operations, alarm analysis, incident triage, troubleshooting, KPI monitoring, and operational reporting.</p>
-          <p>Alongside production operations, I am completing an MSc Information Systems Security (MISS) at BUP and building capability in cloud infrastructure, security monitoring, incident response, and Linux system hardening.</p>
-          <div class="about-highlights">
-            <div class="about-highlight-item"><span class="check">✓</span> Huawei 5G Core &amp; telecom operations</div>
-            <div class="about-highlight-item"><span class="check">✓</span> Incident detection, triage &amp; escalation</div>
-            <div class="about-highlight-item"><span class="check">✓</span> Network and system troubleshooting</div>
-            <div class="about-highlight-item"><span class="check">✓</span> Linux administration &amp; hardening</div>
-            <div class="about-highlight-item"><span class="check">✓</span> Cloud, virtualization &amp; monitoring</div>
-            <div class="about-highlight-item"><span class="check">✓</span> Security operations development</div>
-          </div>
-          <div class="about-proof-strip"><span class="about-proof-label">Operating context</span><strong>24×7 telecom SOC</strong><span>with structured escalation and handover</span></div>
+          <h2 class="section-title" id="about-title" style="text-align:left">Telecom and infrastructure operations</h2>
+          <p>In my current role at Huawei Technologies Bangladesh Ltd., I support the Grameenphone GP UDM project. My work includes monitoring Huawei 5G Core UDM and supporting infrastructure, analysing alarms and operational KPIs, performing initial troubleshooting, and coordinating escalation and service-restoration updates.</p>
+          <p>Previously, I worked in RF and network engineering, supporting wireless links through RF planning, link budgeting, spectrum analysis, site surveys, and PTP/PTMP deployment activities. I am pursuing an MSc in Information Systems Security (MISS) at BUP and continuing to build capability in Linux, cloud infrastructure, automation, and security operations.</p>
+          <ul class="about-point-list">
+            <li>5G Core monitoring, alarm analysis, and escalation</li>
+            <li>RF planning, link budgeting, and PTP/PTMP support</li>
+            <li>RHCSA-backed Linux administration</li>
+            <li>Cloud infrastructure and security operations development</li>
+          </ul>
         </div>
-        <div class="about-image profile-card" role="group" aria-label="Professional operations profile">
-          <div class="profile-card-header"><span class="profile-mark"><i data-lucide="shield-check" style="width:15px;height:15px"></i></span><span>PROFESSIONAL PROFILE</span><span class="profile-status">CAREER FOCUS</span></div>
-          <div class="profile-body">
-            <div class="profile-kicker">OPERATIONS COVERAGE</div>
-            <h3>Telecom infrastructure, security operations, and incident readiness</h3>
-            <p>This is a capability summary—not a live monitoring console. It represents the environments and responsibilities I work across.</p>
-            <div class="profile-scope-list">
-              <div><span class="profile-scope-icon"><i data-lucide="radio-tower" style="width:15px;height:15px"></i></span><span><strong>5G Core</strong><small>UDM · AAA · ENUM · iMaster MAE</small></span></div>
-              <div><span class="profile-scope-icon"><i data-lucide="activity" style="width:15px;height:15px"></i></span><span><strong>Service operations</strong><small>Monitoring · alarms · KPIs · handover</small></span></div>
-              <div><span class="profile-scope-icon"><i data-lucide="lock-keyhole" style="width:15px;height:15px"></i></span><span><strong>Security development</strong><small>Incident response · Linux · network security</small></span></div>
-            </div>
-          </div>
-          <div class="profile-card-footer"><span>PRODUCTION EXPERIENCE</span><span>DEVELOPING PRACTICE</span></div>
-        </div>
+        <aside class="career-snapshot" aria-labelledby="snapshot-title">
+          <div class="snapshot-eyebrow">Professional snapshot</div>
+          <h3 id="snapshot-title">Experience grounded in real operating environments</h3>
+          <p>This portfolio separates production responsibilities, academic research, and skills currently under development.</p>
+          <dl class="snapshot-list">
+            <div><dt>Current role</dt><dd>Network Monitoring Engineer<br>Huawei Technologies Bangladesh Ltd.</dd></div>
+            <div><dt>Academic programme</dt><dd>MSc in Information Systems Security (MISS)<br>Bangladesh University of Professionals</dd></div>
+            <div><dt>Research</dt><dd>RF signal classification and modulation recognition<br><span>Master’s thesis · In progress</span></dd></div>
+          </dl>
+          <a class="snapshot-link" href="experience.html">Explore professional experience <i data-lucide="arrow-up-right" aria-hidden="true"></i></a>
+        </aside>
       </div>
     </div>
   </section>
-<section class="work-across-section"><div class="container"><div class="section-header"><div class="section-label">Career Positioning</div><h2 class="section-title">What I Work Across</h2><p class="section-desc">A connected technology trajectory spanning production operations, developing skills, and research in progress.</p></div><div class="domain-grid"><div class="domain-card"><i data-lucide="radio-tower"></i><strong>5G Core</strong><span>Production operations</span></div><div class="domain-card"><i data-lucide="cloud"></i><strong>Cloud Infrastructure</strong><span>Building expertise</span></div><div class="domain-card"><i data-lucide="workflow"></i><strong>Automation</strong><span>Developing capability</span></div><div class="domain-card"><i data-lucide="shield-check"></i><strong>Security Operations</strong><span>Concepts and practice</span></div><div class="domain-card"><i data-lucide="brain-circuit"></i><strong>RF Machine Learning</strong><span>Research in progress</span></div></div></div></section>
+
+  <section class="work-across-section" aria-labelledby="focus-title">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">Technical Focus</div>
+        <h2 class="section-title" id="focus-title">Experience, practice, and research</h2>
+        <p class="section-desc">A clear distinction between areas supported by professional experience and areas I am continuing to develop.</p>
+      </div>
+      <div class="domain-grid">
+        <article class="domain-card"><i data-lucide="radio-tower" aria-hidden="true"></i><strong>5G Core operations</strong><span>Current professional role</span></article>
+        <article class="domain-card"><i data-lucide="wifi" aria-hidden="true"></i><strong>RF &amp; wireless networks</strong><span>Previous engineering role</span></article>
+        <article class="domain-card"><i data-lucide="terminal" aria-hidden="true"></i><strong>Linux &amp; systems</strong><span>RHCSA-certified foundation</span></article>
+        <article class="domain-card"><i data-lucide="cloud" aria-hidden="true"></i><strong>Cloud &amp; automation</strong><span>Developing capability</span></article>
+        <article class="domain-card"><i data-lucide="brain-circuit" aria-hidden="true"></i><strong>RF machine learning</strong><span>Master’s research in progress</span></article>
+      </div>
+    </div>
+  </section>
 
   <!-- Experience Section -->
   <section id="experience" style="background:var(--bg-secondary)">
@@ -184,7 +184,7 @@
             <div class="experience-date">Nov 2024 — Oct 2025</div>
             <div class="experience-role">IT Executive — E-commerce & System Support</div>
             <div class="experience-company company-identity"><div class="company-logo"><img src="assets/isharify-logo.png" alt="Isharify logo" onerror="this.style.display='none';this.nextElementSibling.style.display='grid'"><span>I</span></div><div><strong>Isharify Limited</strong><span>E-commerce & System Support</span></div></div>
-            <div class="experience-desc">Provided enterprise IT and system support, troubleshot network and server issues, documented operational incidents, and helped maintain reliable business systems.</div>
+            <div class="experience-desc">Supported day-to-day IT and e-commerce operations, including Amazon and eBay marketplace tasks, website-related updates, and routine operational issue coordination.</div>
             <div class="experience-tags"><span class="tag neutral">IT Support</span><span class="tag neutral">Systems</span><span class="tag neutral">Troubleshooting</span></div>
           </div>
         </div>
@@ -201,12 +201,12 @@
         <p class="section-desc">Tools and technologies I work with across network engineering and cybersecurity.</p>
       </div>
       <div class="skills-grid">
-        <div class="card skill-card"><div class="skill-icon"><i data-lucide="shield-check" style="width:24px;height:24px"></i></div><h3>Security Operations</h3><p>Production exposure to alarm analysis, incident triage, escalation, documentation, and operational reporting</p></div>
-        <div class="card skill-card"><div class="skill-icon" style="background:rgba(59,130,246,0.1);color:var(--blue);border-color:rgba(59,130,246,0.15)"><i data-lucide="network" style="width:24px;height:24px"></i></div><h3>Networking & Security</h3><p>Working knowledge of TCP/IP, DNS, DHCP, VLANs, routing, segmentation, firewall policies, VPN, and troubleshooting</p></div>
-        <div class="card skill-card"><div class="skill-icon" style="background:rgba(34,197,94,0.1);color:var(--green);border-color:rgba(34,197,94,0.15)"><i data-lucide="terminal" style="width:24px;height:24px"></i></div><h3>Linux & Infrastructure</h3><p>RHCSA-backed Linux practice across RHEL, Ubuntu, SSH, permissions, hardening, Bash, logging, and monitoring</p></div>
-        <div class="card skill-card"><div class="skill-icon" style="background:rgba(168,85,247,0.1);color:var(--purple);border-color:rgba(168,85,247,0.15)"><i data-lucide="server" style="width:24px;height:24px"></i></div><h3>Telecom Platforms</h3><p>Current telecom exposure across Huawei 5G Core, UDM, AAA, ENUM, iMaster MAE, and CyberArk PAM</p></div>
-        <div class="card skill-card"><div class="skill-icon" style="background:rgba(234,179,8,0.1);color:var(--yellow);border-color:rgba(234,179,8,0.15)"><i data-lucide="cloud" style="width:24px;height:24px"></i></div><h3>Cloud & Virtualization</h3><p>Developing capability across AWS EC2/VPC/IAM/S3, Huawei FusionCloud, VMware ESXi, VirtualBox, and Docker</p></div>
-        <div class="card skill-card"><div class="skill-icon" style="background:rgba(220,38,38,0.1);color:var(--accent);border-color:rgba(220,38,38,0.15)"><i data-lucide="radio-tower" style="width:24px;height:24px"></i></div><h3>RF Engineering</h3><p>Hands-on RF role exposure across link budgeting, LOS surveys, spectrum analysis, and PTP/PTMP deployment support</p></div>
+        <div class="card skill-card" id="security-operations"><div class="skill-icon"><i data-lucide="shield-check" style="width:24px;height:24px"></i></div><h3>Security Operations</h3><p>Production exposure to alarm analysis, incident triage, escalation, documentation, and operational reporting</p></div>
+        <div class="card skill-card" id="networking-security"><div class="skill-icon" style="background:rgba(59,130,246,0.1);color:var(--blue);border-color:rgba(59,130,246,0.15)"><i data-lucide="network" style="width:24px;height:24px"></i></div><h3>Networking & Security</h3><p>Working knowledge of TCP/IP, DNS, DHCP, VLANs, routing, segmentation, firewall policies, VPN, and troubleshooting</p></div>
+        <div class="card skill-card" id="linux-infrastructure"><div class="skill-icon" style="background:rgba(34,197,94,0.1);color:var(--green);border-color:rgba(34,197,94,0.15)"><i data-lucide="terminal" style="width:24px;height:24px"></i></div><h3>Linux & Infrastructure</h3><p>RHCSA-backed Linux practice across RHEL, Ubuntu, SSH, permissions, hardening, Bash, logging, and monitoring</p></div>
+        <div class="card skill-card" id="telecom-platforms"><div class="skill-icon" style="background:rgba(168,85,247,0.1);color:var(--purple);border-color:rgba(168,85,247,0.15)"><i data-lucide="server" style="width:24px;height:24px"></i></div><h3>Telecom Platforms</h3><p>Current telecom exposure across Huawei 5G Core, UDM, AAA, ENUM, iMaster MAE, and CyberArk PAM</p></div>
+        <div class="card skill-card" id="cloud-virtualization"><div class="skill-icon" style="background:rgba(234,179,8,0.1);color:var(--yellow);border-color:rgba(234,179,8,0.15)"><i data-lucide="cloud" style="width:24px;height:24px"></i></div><h3>Cloud & Virtualization</h3><p>Developing capability across AWS EC2/VPC/IAM/S3, Huawei FusionCloud, VMware ESXi, VirtualBox, and Docker</p></div>
+        <div class="card skill-card" id="rf-engineering"><div class="skill-icon" style="background:rgba(220,38,38,0.1);color:var(--accent);border-color:rgba(220,38,38,0.15)"><i data-lucide="radio-tower" style="width:24px;height:24px"></i></div><h3>RF Engineering</h3><p>Hands-on RF role exposure across link budgeting, LOS surveys, spectrum analysis, and PTP/PTMP deployment support</p></div>
       </div>
       </div>
     </div>
@@ -228,9 +228,9 @@
   <section id="blog-preview">
     <div class="container">
       <div class="section-header">
-        <div class="section-label">Latest Write-ups</div>
+        <div class="section-label">Selected Writing</div>
         <h2 class="section-title">From The Blog</h2>
-        <p class="section-desc">Recent insights on cybersecurity, network engineering, and vulnerability research.</p>
+        <p class="section-desc">Selected technical notes on RF engineering, network infrastructure, and security topics.</p>
       </div>
       <div class="projects-grid" style="grid-template-columns: repeat(2, 1fr);">
         <div class="card" style="padding:0;overflow:hidden">
@@ -239,7 +239,7 @@
             <div class="blog-meta">
               <span class="author">MD. Sakib Hasan</span>
               <span class="dot"></span>
-              <span>Jan 13, 2025</span>
+              <span>RF engineering field note</span>
             </div>
             <h3 style="font-size:20px;font-weight:600;margin-bottom:10px;line-height:1.3">
               <a href="blog.html">RF Engineering Field Notes: Planning and Troubleshooting Wireless Links</a>
@@ -265,6 +265,8 @@
   </section>
 
   <!-- Footer -->
+  </main>
+
   <footer class="footer">
     <div class="container">
       <div class="footer-grid">
@@ -306,12 +308,12 @@
           </ul>
         </div>
         <div class="footer-col">
-          <h4>Expertise</h4>
+          <h4>Areas of focus</h4>
           <ul>
-            <li><a href="blog.html">Security Operations</a></li>
-            <li><a href="blog.html">Incident Response</a></li>
-            <li><a href="blog.html">Network Security</a></li>
-            <li><a href="blog.html">Linux Infrastructure</a></li>
+            <li><a href="experience.html">5G Core Operations</a></li>
+            <li><a href="experience.html">RF &amp; Network Engineering</a></li>
+            <li><a href="#skills">Linux &amp; Infrastructure</a></li>
+            <li><a href="research.html">RF Machine Learning</a></li>
           </ul>
         </div>
       </div>
