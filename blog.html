@@ -35,7 +35,7 @@
         <a href="resume.html">Resume</a>
         <a href="contact.html">Contact</a>
       </div>
-      <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu" aria-controls="navLinks" aria-expanded="false">
         <span></span><span></span><span></span>
       </button>
     </div>
@@ -161,190 +161,8 @@
               </div>
             </div>
           </div>
-
-          <!-- Second Article: SharePoint Zero-Day -->
-          <div class="card" style="margin-bottom:40px;padding:40px">
-            <div class="blog-post-full">
-              <div class="post-header" style="text-align:left;padding:0;margin-bottom:32px">
-                <div class="blog-meta" style="margin-bottom:16px">
-                  <span class="author">Dr. Johannes Ullrich (SANS Institute)</span>
-                  <span class="dot"></span>
-                  <span>July 23, 2025</span>
-                  <span class="dot"></span>
-                  <span style="color:#ef4444;font-weight:600">⚠ Critical Vulnerability</span>
-                </div>
-                <h1 style="font-size:28px">Critical SharePoint Zero-Day Exploited: What You Need to Know About CVE-2025-53770</h1>
-              </div>
-              <div class="post-content">
-                <p><strong>CVE-2025-53770 is likely one of the most critical SharePoint vulnerabilities to date.</strong></p>
-                <p>On Sunday, July 20, Microsoft alerted customers to an actively exploited critical zero-day vulnerability, <code>CVE-2025-53770</code>, affecting SharePoint servers. SharePoint Server 2016, 2019, and the Subscription editions are all susceptible, while SharePoint Online is not affected. Any organizations running on-prem SharePoint are advised to act immediately.</p>
-                <p>Authentication is entirely bypassed by spoofing the Referer header, allowing attackers to upload files, including a web shell. In some cases, researchers are seeing .Net machine keys being stolen so attackers can maintain access even after patching.</p>
-                
-                <h2>Key Points</h2>
-                <ul>
-                  <li><strong>No login required:</strong> Anyone with access to the server can get in, even without a username or password.</li>
-                  <li><strong>Full control:</strong> Attackers can do anything the SharePoint server can do, including reading documents, uploading malware, or attacking other parts of your network.</li>
-                  <li><strong>Silent persistence:</strong> Even if you apply patches, attackers may still have access if they stole the server's keys.</li>
-                </ul>
-                
-                <h2>How the Exploit Works</h2>
-                <p>The vulnerability originated from bypassing mitigations for two previously patched bugs, CVE-2025-49704 and CVE-2025-49706. At the center of the exploit is the <code>ToolPane.aspx</code> endpoint. Attackers found it can be tricked into processing unauthorized requests by sending a spoofed Referer header claiming they're coming from SharePoint's logout page, <code>SignOut.aspx</code>.</p>
-                
-                <h2>Detection and Mitigation</h2>
-                <p>Review your SharePoint logs and endpoint or SIEM alerts. Key indicators to look for include:</p>
-                <ul>
-                  <li>Suspicious requests to <code>/ToolPane.aspx</code></li>
-                  <li>Presence of a web shell (check for <code>spinstall0.aspx</code>)</li>
-                  <li>Unusual server activity from <code>w3wp.exe</code></li>
-                  <li>Known attacker IPs: <code>107.191.58.76</code>, <code>104.238.159.149</code>, <code>96.9.125.147</code></li>
-                </ul>
-                
-                <h2>Immediate Actions Required</h2>
-                <ol>
-                  <li>Apply Microsoft's latest security updates</li>
-                  <li>Enable AMSI and update antivirus</li>
-                  <li>Rotate your machine keys</li>
-                  <li>Isolate vulnerable servers if needed</li>
-                  <li>Reset credentials and review access</li>
-                  <li>Run threat hunts and EDR scans</li>
-                  <li>Check backups and logging</li>
-                </ol>
-                
-                <blockquote>
-                  <strong>Source:</strong> This analysis is based on research by <strong>Dr. Johannes Ullrich</strong>, Dean of Research for SANS Technology Institute and founder of the Internet Storm Center (DShield.org).
-                </blockquote>
-              </div>
-            </div>
-          </div>
-
-          <!-- Article Grid (Upcoming) -->
-          <div class="section-header" style="text-align:left;margin-bottom:32px">
-            <h2 class="section-title" style="font-size:24px">Upcoming Articles</h2>
-          </div>
-          <div class="blog-articles-grid" style="margin-bottom:20px">
-            <div class="card blog-article-card">
-              <div class="experience-tags" style="margin-bottom:12px">
-                <span class="tag blue">Web Security</span>
-              </div>
-              <h3><a href="#">SQL Injection Deep Dive</a></h3>
-              <p>Comprehensive guide to SQL injection techniques, detection methods, and prevention strategies with practical examples.</p>
-              <div class="upcoming-tags">
-                <span class="tag neutral">SQLMap</span>
-                <span class="tag neutral">Burp Suite</span>
-                <span class="tag neutral">OWASP</span>
-              </div>
-            </div>
-            <div class="card blog-article-card">
-              <div class="experience-tags" style="margin-bottom:12px">
-                <span class="tag blue">Web Security</span>
-              </div>
-              <h3><a href="#">XSS Attack Vectors</a></h3>
-              <p>Exploring different types of Cross-Site Scripting attacks, payloads, and real-world exploitation scenarios.</p>
-              <div class="upcoming-tags">
-                <span class="tag neutral">XSS</span>
-                <span class="tag neutral">JavaScript</span>
-                <span class="tag neutral">Payloads</span>
-              </div>
-            </div>
-            <div class="card blog-article-card">
-              <div class="experience-tags" style="margin-bottom:12px">
-                <span class="tag purple">Network Security</span>
-              </div>
-              <h3><a href="#">Network Reconnaissance</a></h3>
-              <p>Step-by-step network reconnaissance techniques using Nmap, Wireshark, and other essential tools.</p>
-              <div class="upcoming-tags">
-                <span class="tag neutral">Nmap</span>
-                <span class="tag neutral">Wireshark</span>
-                <span class="tag neutral">Recon</span>
-              </div>
-            </div>
-            <div class="card blog-article-card">
-              <div class="experience-tags" style="margin-bottom:12px">
-                <span class="tag yellow">CTF Challenges</span>
-              </div>
-              <h3><a href="#">CTF Write-ups</a></h3>
-              <p>Notes on practical security learning, system hardening, and incident-handling fundamentals.</p>
-              <div class="upcoming-tags">
-                <span class="tag neutral">CTF</span>
-                <span class="tag neutral">Security Learning</span>
-                <span class="tag neutral">Write-ups</span>
-              </div>
-            </div>
-            <div class="card blog-article-card">
-              <div class="experience-tags" style="margin-bottom:12px">
-                <span class="tag green">Tools & Setup</span>
-              </div>
-              <h3><a href="#">Tool Reviews & Setup</a></h3>
-              <p>In-depth reviews of cybersecurity tools, installation guides, and optimal configuration for penetration testing.</p>
-              <div class="upcoming-tags">
-                <span class="tag neutral">Kali Linux</span>
-                <span class="tag neutral">Tools</span>
-                <span class="tag neutral">Setup</span>
-              </div>
-            </div>
-            <div class="card blog-article-card">
-              <div class="experience-tags" style="margin-bottom:12px">
-                <span class="tag">Red Teaming</span>
-              </div>
-              <h3><a href="#">Red Team Methodology</a></h3>
-              <p>Building foundational knowledge in incident response, threat detection, and security monitoring.</p>
-              <div class="upcoming-tags">
-                <span class="tag neutral">Red Team</span>
-                <span class="tag neutral">MITRE ATT&CK</span>
-                <span class="tag neutral">Adversary</span>
-              </div>
-            </div>
-          </div>
-
-          <!-- Subscribe -->
-          <div class="subscribe-box">
-            <h3>Stay Updated</h3>
-            <p>Get notified when new articles are published. Join the cybersecurity community!</p>
-            <form class="subscribe-form" onsubmit="event.preventDefault(); showToast('Subscribed successfully!')">
-              <input type="email" placeholder="Enter your email" required>
-              <button type="submit" class="btn btn-primary btn-sm">Subscribe</button>
-            </form>
-          </div>
-        </div>
-
         <!-- Sidebar -->
         <aside class="blog-sidebar">
-          <div class="card sidebar-card">
-            <h3>Categories</h3>
-            <ul class="category-list">
-              <li><a href="#">Web Security <span class="category-count">2</span></a></li>
-              <li><a href="#">Network Security <span class="category-count">1</span></a></li>
-              <li><a href="#">CTF Challenges <span class="category-count">1</span></a></li>
-              <li><a href="#">Tools & Setup <span class="category-count">1</span></a></li>
-              <li><a href="#">RF Engineering <span class="category-count">2</span></a></li>
-              <li><a href="#">Red Teaming <span class="category-count">1</span></a></li>
-            </ul>
-          </div>
-          <div class="card sidebar-card">
-            <h3>Upcoming</h3>
-            <ul class="upcoming-list">
-              <li>
-                <h4>SQL Injection Deep Dive</h4>
-                <p>Comprehensive guide with practical examples</p>
-                <div class="upcoming-tags"><span class="tag neutral">SQLMap</span><span class="tag neutral">OWASP</span></div>
-              </li>
-              <li>
-                <h4>XSS Attack Vectors</h4>
-                <p>Real-world exploitation scenarios</p>
-                <div class="upcoming-tags"><span class="tag neutral">XSS</span><span class="tag neutral">Payloads</span></div>
-              </li>
-              <li>
-                <h4>Network Reconnaissance</h4>
-                <p>Nmap, Wireshark techniques</p>
-                <div class="upcoming-tags"><span class="tag neutral">Nmap</span><span class="tag neutral">Recon</span></div>
-              </li>
-              <li>
-                <h4>Core Network Architecture</h4>
-                <p>OSPF/BGP routing deep dive</p>
-                <div class="upcoming-tags"><span class="tag neutral">BGP</span><span class="tag neutral">OSPF</span></div>
-              </li>
-            </ul>
-          </div>
           <div class="card sidebar-card" style="background:linear-gradient(135deg, rgba(220,38,38,0.08), rgba(220,38,38,0.02));border-color:rgba(220,38,38,0.15)">
             <h3 style="border-color:rgba(220,38,38,0.2)">About This Blog</h3>
             <p style="font-size:13px;color:var(--text-secondary);line-height:1.7">
@@ -365,7 +183,7 @@
           <p>Telecom and infrastructure professional working across 5G Core, cloud, automation, security, and RF/AI research.</p>
           <div class="contact-socials" style="margin-top:20px">
             <a href="https://github.com/shsakib0002" target="_blank" rel="noopener" class="social-link" aria-label="GitHub"><svg class="brand-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.1.79-.25.79-.56v-2.17c-3.2.7-3.88-1.36-3.88-1.36-.53-1.34-1.28-1.7-1.28-1.7-1.05-.72.08-.71.08-.71 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.56-.29-5.26-1.28-5.26-5.68 0-1.25.45-2.27 1.19-3.07-.12-.29-.52-1.46.11-3.04 0 0 .97-.31 3.18 1.17a11.1 11.1 0 0 1 5.8 0c2.21-1.48 3.18-1.17 3.18-1.17.63 1.58.23 2.75.11 3.04.74.8 1.19 1.82 1.19 3.07 0 4.41-2.7 5.38-5.27 5.67.41.36.78 1.07.78 2.16v3.2c0 .31.21.67.8.56A11.51 11.51 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z"/></svg></a>
-            <a href="https://www.linkedin.com/in/sakib-hasan-infosec/" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn"><svg class="brand-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.44-2.13 2.94v5.67H9.35V8.99h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.61 0 4.28 2.38 4.28 5.47v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM3.56 20.45h3.57V8.99H3.56v11.46ZM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.23 0 22.22 0Z"/></svg></a>
+            <a href="https://www.linkedin.com/in/md-sakib-hasan-infosec/" target="_blank" rel="noopener" class="social-link" aria-label="LinkedIn"><svg class="brand-icon" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.03-3.04-1.85-3.04-1.85 0-2.13 1.44-2.13 2.94v5.67H9.35V8.99h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.61 0 4.28 2.38 4.28 5.47v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM3.56 20.45h3.57V8.99H3.56v11.46ZM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.23 0 22.22 0Z"/></svg></a>
             <a href="mailto:sakibhasan.infosec@gmail.com" class="social-link" aria-label="Email"><i data-lucide="mail" style="width:18px;height:18px"></i></a>
           </div>
         </div>
@@ -377,13 +195,12 @@
       </div>
       <div class="footer-bottom">
         <span>&copy; 2026 MD. Sakib Hasan. All rights reserved.</span>
-        <div class="footer-bottom-links"><a href="#">Privacy</a><a href="#">Terms</a></div>
+        <div class="footer-bottom-links"><span>Professional portfolio</span></div>
       </div>
     </div>
   </footer>
 
   <button class="back-to-top" id="backToTop" aria-label="Back to top"><i data-lucide="chevron-up" style="width:20px;height:20px"></i></button>
-  <div class="toast" id="toast"><span class="toast-icon">✓</span><span id="toastMsg">Subscribed!</span></div>
 
   <script>
     lucide.createIcons();
@@ -399,6 +216,7 @@
     const mobileOverlay = document.getElementById('mobileOverlay');
     function toggleMenu() {
       mobileToggle.classList.toggle('active');
+      mobileToggle.setAttribute('aria-expanded', navLinks.classList.contains('open') ? 'true' : 'false');
       navLinks.classList.toggle('open');
       mobileOverlay.classList.toggle('active');
       document.body.style.overflow = navLinks.classList.contains('open') ? 'hidden' : '';
