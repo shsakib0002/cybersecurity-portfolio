@@ -914,33 +914,6 @@ section {
   line-height: 1.6;
 }
 
-/* --- Stats Section --- */
-.stats-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 24px;
-}
-
-.stat-card {
-  text-align: center;
-  padding: 40px 24px;
-}
-
-.stat-number {
-  font-size: 42px;
-  font-weight: 700;
-  color: var(--accent);
-  line-height: 1;
-  margin-bottom: 8px;
-  font-family: var(--font-mono);
-}
-
-.stat-label {
-  font-size: 14px;
-  color: var(--text-secondary);
-  font-weight: 500;
-}
-
 /* --- Projects Grid --- */
 .projects-filter {
   display: flex;
@@ -2081,10 +2054,6 @@ section {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  .stats-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
   .projects-grid {
     grid-template-columns: 1fr;
   }
@@ -2196,10 +2165,6 @@ section {
     gap: 16px;
   }
 
-  .stat-number {
-    font-size: 32px;
-  }
-
   .about-highlights {
     grid-template-columns: 1fr;
   }
@@ -2287,15 +2252,6 @@ section {
 
   .skills-grid {
     grid-template-columns: 1fr;
-  }
-
-  .stats-grid {
-    grid-template-columns: 1fr 1fr;
-    gap: 16px;
-  }
-
-  .stat-card {
-    padding: 28px 16px;
   }
 
   .contact-form {
