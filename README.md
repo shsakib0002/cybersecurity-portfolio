@@ -1,10 +1,11 @@
-# Sakib Hasan — Portfolio
+# Sakib.Sec — MD. Sakib Hasan
 
-Static portfolio for an infrastructure & network operations engineer (Huawei 5G Core / telecom SOC).
+Multi-page portfolio in the restored black-and-red design.
+
 Live: https://sakibinfosec.netlify.app
 
-- Plain HTML/CSS/JS — no build step. Deployed on Netlify (`netlify.toml`).
-- `index.html` (home, all sections), `research.html`, `blog.html`, `404.html`
-- `_redirects` maps the old multi-page URLs to the new sections; `_headers` sets security headers and caching.
-- Contact form uses Netlify Forms (`data-netlify`); view submissions in the Netlify dashboard.
-- Content source of truth: `assets/MD-Sakib-Hasan-CV.pdf`.
+- Static HTML, CSS and JavaScript; no build step.
+- Pages: Home, Experience, Projects, Research, Certifications, Blog, Resume and Contact.
+- CV download: `assets/MD-Sakib-Hasan-CV.pdf`.
+- Contact form uses Netlify Forms.
+- Security headers, robots.txt and sitemap are maintained in the repository.
