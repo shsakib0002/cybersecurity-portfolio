@@ -28,7 +28,7 @@
         <a href="resume.html">Resume</a>
         <a href="contact.html">Contact</a>
       </div>
-      <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu" aria-controls="navLinks" aria-expanded="false"><span></span><span></span><span></span></button>
     </div>
   </nav>
   <div class="mobile-overlay" id="mobileOverlay"></div>
@@ -94,7 +94,7 @@
         <div class="footer-col"><h4>More</h4><ul><li><a href="resume.html">Resume</a></li><li><a href="contact.html">Contact</a></li><li><a href="https://github.com/shsakib0002" target="_blank" rel="noopener">GitHub</a></li></ul></div>
         <div class="footer-col"><h4>Expertise</h4><ul><li><a href="blog.html">Security Operations</a></li><li><a href="blog.html">Incident Response</a></li><li><a href="blog.html">Network Security</a></li><li><a href="blog.html">Linux Infrastructure</a></li></ul></div>
       </div>
-      <div class="footer-bottom"><span>&copy; 2026 MD. Sakib Hasan. All rights reserved.</span><div class="footer-bottom-links"><a href="#">Privacy</a><a href="#">Terms</a></div></div>
+      <div class="footer-bottom"><span>&copy; 2026 MD. Sakib Hasan. All rights reserved.</span><div class="footer-bottom-links"><span>Professional portfolio</span></div></div>
     </div>
   </footer>
 
@@ -115,6 +115,7 @@
     function toggleMenu() {
       mobileToggle.classList.toggle('active');
       navLinks.classList.toggle('open');
+      mobileToggle.setAttribute('aria-expanded', navLinks.classList.contains('open') ? 'true' : 'false');
       mobileOverlay.classList.toggle('active');
       document.body.style.overflow = navLinks.classList.contains('open') ? 'hidden' : '';
     }
