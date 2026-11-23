@@ -278,3 +278,24 @@ input:focus,textarea:focus,select:focus{outline:0;border-color:var(--accent);box
 .mb-22{margin-bottom:22px}.mt-0{margin-top:0!important}.mt-18{margin-top:18px}.mt-28{margin-top:28px}.mt-72{margin-top:72px}
 .pipe-narrow{max-width:360px;margin:36px 0 0}
 .form-note a{text-decoration:underline}
+
+
+/* ---------- Evidence-led work and skill context ---------- */
+.work-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.work-card{display:flex;flex-direction:column;min-width:0;padding:30px;border:1px solid var(--line);border-radius:var(--r);background:linear-gradient(160deg,var(--surface),var(--bg-2));transition:transform .22s,border-color .22s,box-shadow .22s}
+.work-card:hover{transform:translateY(-3px);border-color:var(--line-2);box-shadow:var(--shadow)}
+.work-top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:22px}
+.work-index{font:500 12px var(--mono);color:var(--text-3);letter-spacing:.08em}
+.work-card h3{font-size:21px;line-height:1.3;margin-bottom:12px}
+.work-card>p{color:var(--text-2);font-size:15.5px}
+.work-facts{display:grid;gap:13px;margin-top:auto;padding-top:24px}
+.work-facts>div{padding-top:13px;border-top:1px solid var(--line)}
+.work-facts dt{font:500 11px var(--mono);color:var(--text-3);letter-spacing:.09em;text-transform:uppercase;margin-bottom:5px}
+.work-facts dd{margin:0;color:var(--text-2);font-size:14px;line-height:1.6}
+.work-link{display:inline-flex;align-items:center;gap:9px;align-self:flex-start;margin-top:22px;color:var(--accent);font-size:14px;font-weight:600}
+.work-link svg{width:17px;height:17px;transition:transform .18s}
+.work-link:hover svg{transform:translateX(4px)}
+.work-note{margin-top:18px;color:var(--text-3);font-size:13px}
+.skill-context{margin:-7px 0 14px;color:var(--text-3);font:500 11px var(--mono);letter-spacing:.07em;text-transform:uppercase}
+@media (max-width:980px){.work-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:640px){.work-grid{grid-template-columns:1fr}.work-card{padding:23px}.work-card h3{font-size:19px}}
