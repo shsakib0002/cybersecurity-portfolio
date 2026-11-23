@@ -2384,3 +2384,13 @@ section {
   .professional-domains{min-height:0;padding:22px}
   .professional-domains h3{font-size:22px}
 }
+
+
+/* Small compatibility refinements for restored multi-page content. */
+.project-evidence{margin:14px 0 2px;color:var(--text-muted);font-size:12px;line-height:1.6}
+.project-evidence strong{color:var(--text-secondary);font-weight:600}
+.contact-brand-icon{width:18px;height:18px;display:block}
+.career-timeline .current b{color:var(--accent)}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}
+}
