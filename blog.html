@@ -32,7 +32,7 @@
       </button>
     </div>
   </nav>
-  <div class="mobile-overlay" id="mobileOverlay"></div>
+  <div class="mobile-overlay" id="mobileOverlay"></div><div class="reading-progress" id="readingProgress" aria-hidden="true"></div>
 
   <!-- Page Header -->
   <div id="main" class="page-header">
@@ -57,10 +57,7 @@
           <div class="blog-featured">
             <div class="card" style="padding:0;overflow:hidden">
               <div class="blog-featured-image">
-                <div style="position:relative;z-index:2;text-align:center;padding:24px">
-                  <div style="font-size:64px;margin-bottom:12px">📡</div>
-                  <div style="font-size:14px;color:var(--text-muted);font-family:var(--font-mono)">RF ENGINEERING</div>
-                </div>
+                <div class="blog-visual-signal" role="img" aria-label="Technical illustration of an RF wireless link field note"><span class="diagram-caption">FIELD NOTE / RF LINK</span><div class="antenna-line"><i></i><i></i><i></i><i></i><i></i></div><div class="link-endpoints"><b>PTP</b><span>LOS · SNR · LINK BUDGET</span><b>PTMP</b></div></div>
               </div>
               <div class="blog-featured-content">
                 <div class="blog-meta">
@@ -102,19 +99,19 @@
               <div class="post-content">
                 <p>In my role as an Assistant Network Engineer on the RF team at Amber IT, I supported wireless internet service provider (WISP) infrastructure through RF planning, link budgeting, spectrum analysis, site surveys, and troubleshooting. The work involved exposure to platforms from <strong>Cambium Networks, Ubiquiti, and Mimosa</strong> in field deployment and maintenance contexts.</p>
                 
-                <h2>Practical considerations in wireless deployment</h2>
+                <h2 id="article-deployment">Practical considerations in wireless deployment</h2>
                 <p>Wireless link quality depends on the radio platform, frequency, channel conditions, antenna configuration, installation quality, and the surrounding RF environment. These factors need to be considered together rather than relying on a device's headline throughput specification.</p>
 
-                <h3>Line of sight and link budget</h3>
+                <h3 id="article-budget">Line of sight and link budget</h3>
                 <p>Site surveys and link-budget checks help assess path feasibility before deployment. Antenna alignment, path clearance, cable and connector losses, and expected fade margin all affect link reliability.</p>
 
-                <h3>Spectrum conditions</h3>
+                <h3 id="article-spectrum">Spectrum conditions</h3>
                 <p>Spectrum analysis helps identify noise and potential interference in the local environment. Channel selection and channel width should be considered alongside regulatory requirements, device capabilities, and the needs of nearby links.</p>
 
-                <h3>Point-to-point and point-to-multipoint links</h3>
+                <h3 id="article-topology">Point-to-point and point-to-multipoint links</h3>
                 <p>Point-to-point links connect two network locations, while point-to-multipoint deployments serve multiple remote stations from a common access point. The planning and troubleshooting approach differs, particularly around alignment, airtime, capacity, and interference.</p>
 
-                <h2>My Role: RF &amp; Wireless Network Support</h2>
+                <h2 id="article-role">My Role: RF &amp; Wireless Network Support</h2>
                 <p>During my role as an Assistant Network Engineer in the RF team at Amber IT, I supported wireless access and backhaul activities, including:</p>
                 <ul>
                   <li>Assisting with RF planning, link budgeting, and frequency review.</li>
@@ -125,7 +122,7 @@
                   <li>Validating basic Layer 2/Layer 3 items, including VLANs, trunks, and basic routing where required.</li>
                 </ul>
 
-                <h2>Platforms encountered</h2>
+                <h2 id="article-platforms">Platforms encountered</h2>
                 <p>Equipment in the environments I supported included:</p>
                 <ul>
                   <li><strong>Cambium Networks ePMP:</strong> ePMP Force 180, 190, 200, and related platform deployments.</li>
@@ -134,7 +131,7 @@
                 </ul>
                 <p class="project-evidence">Exact performance and frequency specifications vary by model, firmware, antenna configuration, and regulatory region. Refer to the relevant vendor documentation for device-specific figures.</p>
 
-                <h2>Key Technical Skills</h2>
+                <h2 id="article-skills">Key Technical Skills</h2>
                 <div class="experience-tags" style="margin-top:16px">
                   <span class="tag">RF Planning</span>
                   <span class="tag">Link Budgeting</span>
@@ -160,6 +157,7 @@
               This space documents learning and research across network operations, RF systems, cloud infrastructure, and the transition toward security operations and incident response.
             </p>
           </div>
+          <div class="card sidebar-card blog-toc"><h3>In this field note</h3><ol><li><a href="#article-deployment">Deployment considerations</a></li><li><a href="#article-budget">Link budget</a></li><li><a href="#article-spectrum">Spectrum conditions</a></li><li><a href="#article-role">My RF role</a></li><li><a href="#article-platforms">Platforms encountered</a></li></ol></div>
         </aside>
       </div>
     </div>
@@ -200,6 +198,9 @@
     window.addEventListener('scroll', () => {
       navbar.classList.toggle('scrolled', window.scrollY > 50);
       backToTop.classList.toggle('visible', window.scrollY > 400);
+      const article = document.getElementById('rf-article');
+      const progress = document.getElementById('readingProgress');
+      if (article && progress) { const start = article.offsetTop - 120; const distance = Math.max(article.offsetHeight - window.innerHeight, 1); progress.style.transform = `scaleX(${Math.min(1, Math.max(0, (window.scrollY - start) / distance))})`; }
     });
     backToTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: 'smooth' }));
     const mobileToggle = document.getElementById('mobileToggle');

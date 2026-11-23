@@ -46,22 +46,28 @@
 
       <div class="projects-grid" id="projectsGrid">
         <article class="card project-card featured-research" data-category="research">
-          <div class="project-image"><div class="project-icon">📡</div><div class="project-overlay"></div></div>
+          <div class="project-image project-visual-rf" role="img" aria-label="Technical illustration of RF I/Q signal processing into a CNN and LSTM model">
+            <div class="project-diagram rf-diagram"><span class="diagram-caption">VERIFIED RESEARCH SCOPE</span><div class="signal-trace"><i></i><i></i><i></i><i></i><i></i></div><div class="diagram-node-row"><span>I/Q samples</span><b>→</b><span>CNN</span><b>→</b><span>LSTM</span><b>→</b><span>modulation class</span></div></div>
+          </div>
           <div class="project-content">
             <span class="research-project-label">MSc THESIS · IN PROGRESS</span>
             <h3>RF Signal Classification &amp; Modulation Recognition</h3>
             <p>Current research on automatic modulation classification using raw I/Q signal samples, combining CNN-based feature extraction with LSTM temporal modelling. Evaluation focuses on performance across signal-to-noise ratio conditions and dataset variation.</p>
-            <div class="project-tags"><span class="tag">RF Signals</span><span class="tag">CNN–LSTM</span><span class="tag neutral">Python · PyTorch</span></div>
+            <div class="project-tags"><span class="tag">RF Signals</span><span class="tag">CNN–LSTM</span><span class="tag neutral">Python · PyTorch</span><span class="tag neutral">SNR Evaluation</span></div>
+            <p class="project-evidence"><strong>Evidence:</strong> MSc thesis research overview with proposed evaluation scope; experimental results are not yet published.</p>
             <div class="project-links"><a href="research.html"><i data-lucide="book-open"></i> Read Research Overview</a></div>
           </div>
         </article>
         <article class="card project-card" data-category="cloud">
-          <div class="project-image" style="background:linear-gradient(135deg, rgba(59,130,246,0.08), var(--bg-card))"><div class="project-icon">☁</div><div class="project-overlay"></div></div>
+          <div class="project-image project-visual-cloud" role="img" aria-label="Technical illustration of the documented AWS edge computing research architecture">
+            <div class="project-diagram cloud-diagram"><span class="diagram-caption">DOCUMENTED ARCHITECTURE</span><div class="cloud-stack"><span>Edge / Wavelength</span><b>↕</b><span>EC2 · EBS · VPC</span><b>↕</b><span>Lambda · EFS · Aurora</span></div></div>
+          </div>
           <div class="project-content">
             <span class="research-project-label">CLOUD RESEARCH</span>
             <h3>Edge Computing in the Cloud</h3>
             <p>Research into AWS Wavelength for latency-sensitive applications. The documented architecture covers EC2, EBS and VPC, with Lambda, EFS and Aurora in the middleware layer; the repository includes benchmarking code and research materials.</p>
-            <div class="project-tags"><span class="tag">AWS</span><span class="tag">Edge Computing</span><span class="tag neutral">Latency · Throughput · Cost</span></div>
+            <div class="project-tags"><span class="tag">AWS</span><span class="tag">Edge Computing</span><span class="tag neutral">EC2 · EBS · VPC</span><span class="tag neutral">Latency · Throughput · Cost</span></div>
+            <p class="project-evidence"><strong>Evidence:</strong> Public repository and report covering the documented service architecture and benchmark materials.</p>
             <div class="project-links"><a href="https://github.com/shsakib0002/Edge-Computing-in-the-Cloud-Thesis" target="_blank" rel="noopener noreferrer"><i data-lucide="github"></i> Explore Repository &amp; Report</a></div>
           </div>
         </article>
