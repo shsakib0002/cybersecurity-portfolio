@@ -50,7 +50,7 @@
         <a href="resume.html">Resume</a>
         <a href="contact.html">Contact</a>
       </div>
-      <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+      <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu" aria-controls="navLinks" aria-expanded="false">
         <span></span>
         <span></span>
         <span></span>
@@ -197,7 +197,7 @@
     <div class="container">
       <div class="section-header">
         <div class="section-label">Skills</div>
-        <h2 class="section-title">Technical Arsenal</h2>
+        <h2 class="section-title">Technical capabilities</h2>
         <p class="section-desc">Grouped by experience context, certification foundations, and developing technical capability.</p>
       </div>
       <div class="skills-grid">
@@ -212,29 +212,6 @@
     </div>
   </section>
 
-  <!-- Stats Section -->
-  <section style="background:var(--bg-secondary)">
-    <div class="container">
-      <div class="stats-grid">
-        <div class="card stat-card">
-          <div class="stat-number" data-target="2">0</div>
-          <div class="stat-label">Years Across IT &amp; Network Roles</div>
-        </div>
-        <div class="card stat-card">
-          <div class="stat-number" data-target="24">0</div>
-          <div class="stat-label">24×7 SOC Environment</div>
-        </div>
-        <div class="card stat-card">
-          <div class="stat-number" data-target="3">0</div>
-          <div class="stat-label">Professional Roles</div>
-        </div>
-        <div class="card stat-card">
-          <div class="stat-number" data-target="4">0</div>
-          <div class="stat-label">Professional Certifications</div>
-        </div>
-      </div>
-    </div>
-  </section>
 
   <!-- Latest Blog Preview -->
   <section id="blog-preview">
@@ -327,10 +304,7 @@
       </div>
       <div class="footer-bottom">
         <span>&copy; 2026 MD. Sakib Hasan. All rights reserved.</span>
-        <div class="footer-bottom-links">
-          <a href="#">Privacy</a>
-          <a href="#">Terms</a>
-        </div>
+        <div class="footer-bottom-links"><span>Professional portfolio</span></div>
       </div>
     </div>
   </footer>
@@ -339,12 +313,6 @@
   <button class="back-to-top" id="backToTop" aria-label="Back to top">
     <i data-lucide="chevron-up" style="width:20px;height:20px"></i>
   </button>
-
-  <!-- Toast -->
-  <div class="toast" id="toast">
-    <span class="toast-icon">✓</span>
-    <span id="toastMsg">Message sent successfully!</span>
-  </div>
 
   <script>
     // Initialize Lucide icons
@@ -379,6 +347,7 @@
     function toggleMenu() {
       mobileToggle.classList.toggle('active');
       navLinks.classList.toggle('open');
+      mobileToggle.setAttribute('aria-expanded', navLinks.classList.contains('open') ? 'true' : 'false');
       mobileOverlay.classList.toggle('active');
       document.body.style.overflow = navLinks.classList.contains('open') ? 'hidden' : '';
     }
@@ -391,31 +360,6 @@
         if (navLinks.classList.contains('open')) toggleMenu();
       });
     });
-
-    // Animated counters
-    const counters = document.querySelectorAll('.stat-number[data-target]');
-    const counterObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          const el = entry.target;
-          const target = parseInt(el.dataset.target);
-          let current = 0;
-          const increment = target / 60;
-          const timer = setInterval(() => {
-            current += increment;
-            if (current >= target) {
-              el.textContent = target + '+';
-              clearInterval(timer);
-            } else {
-              el.textContent = Math.floor(current) + '+';
-            }
-          }, 30);
-          counterObserver.unobserve(el);
-        }
-      });
-    }, { threshold: 0.5 });
-
-    counters.forEach(c => counterObserver.observe(c));
 
     // Scroll reveal animation
     const revealElements = document.querySelectorAll('.card, .experience-item, .about-grid, .skills-grid');

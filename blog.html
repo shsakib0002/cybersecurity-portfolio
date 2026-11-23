@@ -215,8 +215,8 @@
     const mobileOverlay = document.getElementById('mobileOverlay');
     function toggleMenu() {
       mobileToggle.classList.toggle('active');
-      mobileToggle.setAttribute('aria-expanded', navLinks.classList.contains('open') ? 'true' : 'false');
       navLinks.classList.toggle('open');
+      mobileToggle.setAttribute('aria-expanded', navLinks.classList.contains('open') ? 'true' : 'false');
       mobileOverlay.classList.toggle('active');
       document.body.style.overflow = navLinks.classList.contains('open') ? 'hidden' : '';
     }
