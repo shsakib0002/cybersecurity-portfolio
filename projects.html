@@ -11,29 +11,24 @@
   <link rel="manifest" href="site.webmanifest">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <script src="https://unpkg.com/lucide@latest"></script>
   <link rel="stylesheet" href="style.css">
+  <script src="interactions.js" defer></script>
 </head>
-<body>
+<body class="page-projects">
+  <a class="skip-link" href="#main">Skip to content</a>
 
   <nav class="navbar" id="navbar">
     <div class="container">
       <a href="index.html" class="nav-logo"><div class="logo-icon">S</div>Sakib<span>.</span>Sec</a>
-      <div class="nav-links" id="navLinks">
-        <a href="index.html">Home</a>
-        <a href="projects.html" class="active">Projects</a>
-        <a href="certifications.html">Certifications</a>
-        <a href="blog.html">Blog</a>
-        <a href="resume.html">Resume</a>
-        <a href="contact.html">Contact</a>
-      </div>
+      <div class="nav-links" id="navLinks"><a href="index.html">Home</a><a href="experience.html">Experience</a><a href="projects.html" class="active">Projects</a><a href="research.html">Research</a><a href="certifications.html">Certifications</a><a href="blog.html">Blog</a><a href="resume.html">Resume</a><a href="contact.html">Contact</a></div>
       <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu" aria-controls="navLinks" aria-expanded="false"><span></span><span></span><span></span></button>
     </div>
   </nav>
   <div class="mobile-overlay" id="mobileOverlay"></div>
 
-  <div class="page-header">
+  <div id="main" class="page-header">
     <div class="container">
       <div class="page-breadcrumb"><a href="index.html">Home</a><span class="separator">/</span><span>Projects</span></div>
       <h1>My <span class="text-accent">Projects</span></h1>
@@ -52,22 +47,28 @@
 
       <div class="projects-grid" id="projectsGrid">
         <article class="card project-card featured-research" data-category="research">
-          <div class="project-image"><div class="project-icon">📡</div><div class="project-overlay"></div></div>
+          <div class="project-image project-visual-rf" role="img" aria-label="Technical illustration of RF I/Q signal processing into a CNN and LSTM model">
+            <div class="project-diagram rf-diagram"><span class="diagram-caption">VERIFIED RESEARCH SCOPE</span><div class="signal-trace"><i></i><i></i><i></i><i></i><i></i></div><div class="diagram-node-row"><span>I/Q samples</span><b>→</b><span>CNN</span><b>→</b><span>LSTM</span><b>→</b><span>modulation class</span></div></div>
+          </div>
           <div class="project-content">
             <span class="research-project-label">MSc THESIS · IN PROGRESS</span>
             <h3>RF Signal Classification &amp; Modulation Recognition</h3>
             <p>Current research on automatic modulation classification using raw I/Q signal samples, combining CNN-based feature extraction with LSTM temporal modelling. Evaluation focuses on performance across signal-to-noise ratio conditions and dataset variation.</p>
-            <div class="project-tags"><span class="tag">RF Signals</span><span class="tag">CNN–LSTM</span><span class="tag neutral">Python · PyTorch</span></div>
+            <div class="project-tags"><span class="tag">RF Signals</span><span class="tag">CNN–LSTM</span><span class="tag neutral">Python · PyTorch</span><span class="tag neutral">SNR Evaluation</span></div>
+            <p class="project-evidence"><strong>Evidence:</strong> MSc thesis research overview with proposed evaluation scope; experimental results are not yet published.</p>
             <div class="project-links"><a href="research.html"><i data-lucide="book-open"></i> Read Research Overview</a></div>
           </div>
         </article>
         <article class="card project-card" data-category="cloud">
-          <div class="project-image" style="background:linear-gradient(135deg, rgba(59,130,246,0.08), var(--bg-card))"><div class="project-icon">☁</div><div class="project-overlay"></div></div>
+          <div class="project-image project-visual-cloud" role="img" aria-label="Technical illustration of the documented AWS edge computing research architecture">
+            <div class="project-diagram cloud-diagram"><span class="diagram-caption">DOCUMENTED ARCHITECTURE</span><div class="cloud-stack"><span>Edge / Wavelength</span><b>↕</b><span>EC2 · EBS · VPC</span><b>↕</b><span>Lambda · EFS · Aurora</span></div></div>
+          </div>
           <div class="project-content">
             <span class="research-project-label">CLOUD RESEARCH</span>
             <h3>Edge Computing in the Cloud</h3>
             <p>Research into AWS Wavelength for latency-sensitive applications. The documented architecture covers EC2, EBS and VPC, with Lambda, EFS and Aurora in the middleware layer; the repository includes benchmarking code and research materials.</p>
-            <div class="project-tags"><span class="tag">AWS</span><span class="tag">Edge Computing</span><span class="tag neutral">Latency · Throughput · Cost</span></div>
+            <div class="project-tags"><span class="tag">AWS</span><span class="tag">Edge Computing</span><span class="tag neutral">EC2 · EBS · VPC</span><span class="tag neutral">Latency · Throughput · Cost</span></div>
+            <p class="project-evidence"><strong>Evidence:</strong> Public repository and report covering the documented service architecture and benchmark materials.</p>
             <div class="project-links"><a href="https://github.com/shsakib0002/Edge-Computing-in-the-Cloud-Thesis" target="_blank" rel="noopener noreferrer"><i data-lucide="github"></i> Explore Repository &amp; Report</a></div>
           </div>
         </article>
@@ -123,49 +124,6 @@
     mobileOverlay.addEventListener('click', toggleMenu);
     navLinks.querySelectorAll('a').forEach(l => l.addEventListener('click', () => { if (navLinks.classList.contains('open')) toggleMenu(); }));
 
-    // Project filtering
-    const filterBtns = document.querySelectorAll('.filter-btn');
-    const projectCards = document.querySelectorAll('.project-card');
-
-    filterBtns.forEach(btn => {
-      btn.addEventListener('click', () => {
-        filterBtns.forEach(b => b.classList.remove('active'));
-        btn.classList.add('active');
-        const filter = btn.dataset.filter;
-        projectCards.forEach(card => {
-          const cats = card.dataset.category;
-          if (filter === 'all' || cats.includes(filter)) {
-            card.style.display = '';
-            card.style.opacity = '0';
-            card.style.transform = 'translateY(20px)';
-            requestAnimationFrame(() => {
-              card.style.transition = 'opacity 0.4s ease, transform 0.4s ease';
-              card.style.opacity = '1';
-              card.style.transform = 'translateY(0)';
-            });
-          } else {
-            card.style.display = 'none';
-          }
-        });
-      });
-    });
-
-    // Scroll reveal
-    const revealObserver = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          entry.target.style.opacity = '1';
-          entry.target.style.transform = 'translateY(0)';
-          revealObserver.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.05, rootMargin: '0px 0px -30px 0px' });
-    projectCards.forEach(el => {
-      el.style.opacity = '0';
-      el.style.transform = 'translateY(20px)';
-      el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-      revealObserver.observe(el);
-    });
   </script>
 </body>
 </html>

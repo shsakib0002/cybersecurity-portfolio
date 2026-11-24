@@ -11,31 +11,24 @@
   <link rel="manifest" href="site.webmanifest">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
   <script src="https://unpkg.com/lucide@latest"></script>
   <link rel="stylesheet" href="style.css">
+  <script src="interactions.js" defer></script>
 </head>
-<body>
+<body class="page-contact">
+  <a class="skip-link" href="#main">Skip to content</a>
 
   <nav class="navbar" id="navbar">
     <div class="container">
       <a href="index.html" class="nav-logo"><div class="logo-icon">S</div>Sakib<span>.</span>Sec</a>
-      <div class="nav-links" id="navLinks">
-        <a href="index.html">Home</a>
-        <a href="experience.html">Experience</a>
-        <a href="projects.html">Projects</a>
-        <a href="research.html">Research</a>
-        <a href="certifications.html">Certifications</a>
-        <a href="blog.html">Blog</a>
-        <a href="resume.html">Resume</a>
-        <a href="contact.html" class="active">Contact</a>
-      </div>
+      <div class="nav-links" id="navLinks"><a href="index.html">Home</a><a href="experience.html">Experience</a><a href="projects.html">Projects</a><a href="research.html">Research</a><a href="certifications.html">Certifications</a><a href="blog.html">Blog</a><a href="resume.html">Resume</a><a href="contact.html" class="active">Contact</a></div>
       <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu" aria-controls="navLinks" aria-expanded="false"><span></span><span></span><span></span></button>
     </div>
   </nav>
   <div class="mobile-overlay" id="mobileOverlay"></div>
 
-  <div class="page-header">
+  <div id="main" class="page-header">
     <div class="container">
       <div class="page-breadcrumb"><a href="index.html">Home</a><span class="separator">/</span><span>Contact</span></div>
       <h1>Get In <span class="text-accent">Touch</span></h1>
