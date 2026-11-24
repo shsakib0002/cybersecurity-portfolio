@@ -18,6 +18,7 @@
     '.domain-card',
     '.skill-card',
     '.cert-card',
+    '.credential-row',
     '.question-list > div',
     '.metric-grid > div',
     '.publication-card'
@@ -94,6 +95,46 @@
         });
       });
     });
+  }
+
+  const credentialRows = [...doc.querySelectorAll('.credential-row')];
+  const credentialFilters = [...doc.querySelectorAll('[data-cert-filter]')];
+  const credentialSearch = doc.querySelector('#credentialSearch');
+  const credentialEmpty = doc.querySelector('#credentialEmpty');
+  if (credentialRows.length && credentialFilters.length) {
+    let credentialType = 'all';
+    const updateCredentials = () => {
+      const query = (credentialSearch?.value || '').trim().toLowerCase();
+      let visibleCount = 0;
+      credentialRows.forEach((row) => {
+        const matchesType = credentialType === 'all' || row.dataset.credentialType === credentialType;
+        const matchesSearch = !query || (row.dataset.credentialSearch || '').toLowerCase().includes(query);
+        const matches = matchesType && matchesSearch;
+        if (matches) {
+          visibleCount += 1;
+          row.hidden = false;
+          requestAnimationFrame(() => row.classList.remove('is-credential-hidden'));
+        } else {
+          row.classList.add('is-credential-hidden');
+          window.setTimeout(() => {
+            if (row.classList.contains('is-credential-hidden')) row.hidden = true;
+          }, reduceMotion ? 0 : 180);
+        }
+      });
+      if (credentialEmpty) credentialEmpty.hidden = visibleCount > 0;
+    };
+    credentialFilters.forEach((button) => {
+      button.addEventListener('click', () => {
+        credentialType = button.dataset.certFilter || 'all';
+        credentialFilters.forEach((item) => {
+          const active = item === button;
+          item.classList.toggle('active', active);
+          item.setAttribute('aria-pressed', active ? 'true' : 'false');
+        });
+        updateCredentials();
+      });
+    });
+    credentialSearch?.addEventListener('input', updateCredentials);
   }
 
   if (!reduceMotion && window.matchMedia('(pointer: fine)').matches) {

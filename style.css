@@ -2857,3 +2857,56 @@ body.is-leaving{opacity:0;transition:opacity .17s ease}body{transition:opacity .
 .cursor-spot{position:fixed;z-index:0;top:0;left:0;width:170px;height:170px;border-radius:50%;pointer-events:none;opacity:.14;transform:translate3d(calc(var(--cursor-x, -240px) - 85px),calc(var(--cursor-y, -240px) - 85px),0);background:radial-gradient(circle,rgba(220,38,38,.26),transparent 68%);filter:blur(10px);transition:opacity .2s ease}
 @media (pointer:coarse){.cursor-spot{display:none}}
 @media (prefers-reduced-motion:reduce){.js .reveal-target{opacity:1;transform:none;transition:none}.js .project-card.is-filtered-out{transition:none}.reading-progress{transition:none}body,body.is-leaving{transition:none}.cursor-spot{display:none}.btn::after{display:none}}
+
+/* --- Scalable certification directory --- */
+.page-certifications .cert-directory-section{padding-top:64px!important}
+.cert-directory-intro{display:flex;align-items:flex-end;justify-content:space-between;gap:32px;margin-bottom:28px;padding-bottom:24px;border-bottom:1px solid var(--line-soft)}
+.cert-directory-intro .section-title{margin:8px 0 10px}
+.cert-directory-intro .section-desc{max-width:660px;margin:0;color:var(--text-secondary);line-height:1.7}
+.cert-wallet-link{display:inline-flex;align-items:center;gap:8px;flex:none;color:var(--accent);font:600 11px var(--font-mono);letter-spacing:.06em;text-transform:uppercase;white-space:nowrap}
+.cert-wallet-link svg{width:15px;height:15px}
+.cert-wallet-link:hover{color:var(--text-primary)}
+.cert-toolbar{display:grid;grid-template-columns:minmax(260px,1fr) auto;gap:18px;align-items:center;margin-bottom:14px;padding:14px;border:1px solid var(--line-soft);border-radius:10px;background:rgba(17,17,17,.72)}
+.cert-search{display:flex;align-items:center;gap:10px;min-width:0;color:var(--text-muted)}
+.cert-search svg{width:17px;height:17px;flex:none;color:var(--accent)}
+.cert-search .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.cert-search input{width:100%;border:0;outline:0;background:transparent;color:var(--text-primary);font:14px var(--font-body)}
+.cert-search input::placeholder{color:var(--text-muted)}
+.cert-filters{display:flex;align-items:center;gap:6px;flex-wrap:wrap;justify-content:flex-end}
+.cert-filter{border:1px solid transparent;border-radius:999px;background:transparent;color:var(--text-muted);padding:8px 11px;font:600 10px var(--font-mono);letter-spacing:.04em;text-transform:uppercase;cursor:pointer;transition:color var(--transition-fast),background var(--transition-fast),border-color var(--transition-fast)}
+.cert-filter span{margin-left:5px;color:var(--text-muted)}
+.cert-filter:hover,.cert-filter.active{color:var(--text-primary);border-color:rgba(220,38,38,.35);background:rgba(220,38,38,.1)}
+.cert-filter.active span{color:var(--accent)}
+.credential-list{border-top:1px solid var(--line-soft)}
+.credential-row{display:grid;grid-template-columns:48px minmax(0,1fr) auto auto;align-items:center;gap:18px;padding:18px 16px;border-right:1px solid var(--line-soft);border-bottom:1px solid var(--line-soft);border-left:1px solid var(--line-soft);background:rgba(17,17,17,.56);color:inherit;text-decoration:none;transition:opacity .18s ease,transform .18s ease,background var(--transition-fast),border-color var(--transition-fast)}
+.credential-row:hover{position:relative;z-index:1;border-color:rgba(220,38,38,.45);background:linear-gradient(90deg,rgba(220,38,38,.08),rgba(17,17,17,.84));transform:translateX(4px)}
+.credential-row.is-credential-hidden{opacity:0;transform:translateY(6px);pointer-events:none}
+.credential-row[hidden]{display:none}
+.credential-mark{display:grid;place-items:center;width:44px;height:44px;border:1px solid rgba(220,38,38,.2);border-radius:9px;background:linear-gradient(135deg,rgba(220,38,38,.14),rgba(220,38,38,.04));color:var(--accent)}
+.credential-mark svg{width:20px;height:20px}
+.credential-main{display:grid;gap:4px;min-width:0}
+.credential-main strong{overflow:hidden;color:var(--text-primary);font:600 17px/1.25 var(--font-display);text-overflow:ellipsis;white-space:nowrap}
+.credential-main>span:last-child{overflow:hidden;color:var(--text-muted);font-size:13px;text-overflow:ellipsis;white-space:nowrap}
+.credential-kicker{color:var(--accent);font:600 10px var(--font-mono);letter-spacing:.06em;text-transform:uppercase}
+.credential-meta{display:grid;justify-items:end;gap:6px;min-width:140px;text-align:right}
+.credential-meta time{color:var(--text-muted);font:11px var(--font-mono);white-space:nowrap}
+.credential-meta em{padding:4px 9px;border:1px solid rgba(34,197,94,.15);border-radius:999px;background:rgba(34,197,94,.08);color:var(--green);font:500 10px var(--font-mono);font-style:normal;white-space:nowrap}
+.credential-action{display:inline-flex;align-items:center;gap:5px;color:var(--accent);font:600 10px var(--font-mono);letter-spacing:.05em;text-transform:uppercase;white-space:nowrap}
+.credential-action svg{width:14px;height:14px;transition:transform var(--transition-fast)}
+.credential-row:hover .credential-action svg{transform:translate(2px,-2px)}
+.credential-empty{margin:0;padding:30px 18px;border:1px solid var(--line-soft);border-top:0;color:var(--text-muted);text-align:center}
+.page-certifications .award-section{margin-top:88px}
+@media (max-width:760px){
+  .cert-directory-intro{display:block}
+  .cert-wallet-link{margin-top:18px}
+  .cert-toolbar{grid-template-columns:1fr}
+  .cert-filters{justify-content:flex-start}
+  .credential-row{grid-template-columns:44px minmax(0,1fr) auto;gap:12px;padding:16px 12px}
+  .credential-mark{width:40px;height:40px}
+  .credential-main strong{font-size:15px;white-space:normal}
+  .credential-main>span:last-child{white-space:normal}
+  .credential-meta{min-width:0;justify-items:start;text-align:left}
+  .credential-meta em{display:none}
+  .credential-action{grid-column:2 / -1;padding-top:10px;border-top:1px solid var(--line-soft)}
+}
+@media (prefers-reduced-motion:reduce){.credential-row{transition:none}.credential-row:hover{transform:none}.credential-row.is-credential-hidden{transition:none}}
